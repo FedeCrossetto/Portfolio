@@ -1,7 +1,7 @@
 import React from "react";
 import { ChakraProvider } from "@chakra-ui/react";
 import { Navbar } from "./components/navbar/Navbar";
-import {Home} from "./components/Home";
+import Home from "./components/Home";
 import theme from "./theme/theme";
 import Skills from "./components/Skills";
 
