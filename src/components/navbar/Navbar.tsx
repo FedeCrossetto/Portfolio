@@ -50,7 +50,7 @@ export const Navbar = () => {
           <Flex
             minWidth={["480px","767px","992px","1200px"]}
             py={1}
-            bg={isDark ? "brand.dark" : "brand.ligth"}
+            bg={isDark ? "brand.dark" : "brand.light"}
             alignItems="center"
             justifyContent="space-between"
             pos="fixed"

@@ -100,7 +100,7 @@ const Home = () => {
             </Button>
             <Link
               href="/#"
-              pt={32}
+              pt={["10rem","10rem","8rem","8rem"]}
               variant="ghost"
               _hover={{
                 textDecorationColor: "none",
