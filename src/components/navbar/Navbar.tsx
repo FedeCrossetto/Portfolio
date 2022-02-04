@@ -11,6 +11,7 @@ import {
   HStack,
   Stack,
   Center,
+  VStack,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import NextLink from "next/link";
@@ -44,25 +45,25 @@ export const Navbar = () => {
 
   return (
     <>
-      <Box>
+       <Box>
         <Center h="3rem">
           <Flex
-            minWidth={{base:"480px" , sm:"767px" , md:"992px" , lg:"1200px"}}
-            // width={{ base: "full", md: "auto" }}
-            py={3}
-            bg={isDark ? "brand.dark" : "brand.light"}
+            minWidth={["480px","767px","992px","1200px"]}
+            py={1}
+            bg={isDark ? "brand.dark" : "brand.ligth"}
             alignItems="center"
             justifyContent="space-between"
             pos="fixed"
-            boxShadow="md"
+            // boxShadow="md"
           >
-            <Stack alignContent="center" alignItems="center" right="0">
-              <Text pl="2rem" letterSpacing={1.5}>
+            <HStack alignContent="center" fontSize="xl" px="3rem">
+              <Text pl="1.5rem" letterSpacing={1.5} >
                 Fede
               </Text>
-            </Stack>
+              <Text color={["brand.primary","brand.secondary","brand.primary","brand.secondary"]} fontSize="3xl">_</Text>
+            </HStack>
             <Flex alignItems="flex-center">
-              <HStack as="nav" pr="2rem">
+              <HStack as="nav" >
                 <Flex display={["none", "none", "flex", "flex"]}>
                   {Links.map((link) => (
                     <NavLink key={link}>{link}</NavLink>
@@ -82,7 +83,6 @@ export const Navbar = () => {
                   aria-label="Mode"
                   variant="ghost"
                   onClick={toggleColorMode}
-                  my={3}
                 ></IconButton>
               </HStack>
             </Flex>
@@ -99,8 +99,6 @@ export const Navbar = () => {
             bg={isDark ? "brand.dark" : "brand.light"}
             justifyContent="center"
             justifySelf="center"
-            justifyItems="center"
-            justify="center"
           >
             <Flex justify="flex-start">
               <IconButton
@@ -108,10 +106,10 @@ export const Navbar = () => {
                 icon={<CloseIcon />}          
                 size="sm"
                 varian="ghost"
-                onClick={() => changeDisplay("none")}
+                onClick={() => changeDisplay("none")}          
               ></IconButton>
             </Flex>
-            <Flex flexDir="column" align="center">
+            <VStack  align="center">
               <NextLink href="/" passHref>
                 <Button
                   as="a"
@@ -142,10 +140,10 @@ export const Navbar = () => {
                   Contact
                 </Button>
               </NextLink>
-            </Flex>
+            </VStack>
           </Flex>
         </Center>
-      </Box>
+        </Box>
     </>
   );
 };
