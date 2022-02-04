@@ -1,17 +1,20 @@
 import React from "react";
 import { ChakraProvider } from "@chakra-ui/react";
-import { Navbar } from "./components/navbar/Navbar";
-import Home from "./components/Home";
+import  {Navbar}  from "./components/navbar/Navbar";
+import  {Navbar2}  from "./components/navbar/Navbar2";
+import Home from "./components/layout/Home";
 import theme from "./theme/theme";
-import Skills from "./components/Skills";
+import Skills from "./components/layout/Skills";
+import About from "./components/layout/About";
 
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
       <Navbar/>
-      <Home/>
-      <Skills/>
+     <Home/>
+       <About/>
+      {/* <Skills/> */}
     </ChakraProvider>
   );
 }

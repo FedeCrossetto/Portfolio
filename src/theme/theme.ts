@@ -4,6 +4,9 @@ import '@fontsource/raleway/400.css'
 import '@fontsource/open-sans/700.css'
 import '@fontsource/poppins/400.css'
 export default extendTheme({
+  // config:{
+  //   initialColorMode:"dark"
+  // },
   fonts: {
     heading: 'Poppins',
     body: 'Poppins',
@@ -12,7 +15,7 @@ export default extendTheme({
     brand: {
       primary: "#FF6902",
       secondary: "#FD1F55",
-      tertiary: "#CACACA",
+      tertiary: "#9b9c9e",
       dark:"#1a202c",
       light:"#ffffff"
     },
