@@ -34,11 +34,12 @@ export const About = () => {
             <Stack
               direction={["column", "column", "row", "row"]}
               align={["center", "center", "start", "start"]}
-              p="8rem"
+              p={["2rem","2rem","8rem","8rem"]}
             >
               <Image
                 src="https://images.unsplash.com/photo-1604964432806-254d07c11f32?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
-                boxSize="300px"
+                boxSize={["300px","300px","400px","400px"]}
+                ml={["","","2rem","2rem"]}
                 alt="Me"
                 objectFit="contain"
                 borderRadius="xl"
@@ -51,11 +52,13 @@ export const About = () => {
               >
                 Web developer, with extensive knowledge and years of experience
                 ,working in web technologies and UI / UX design ,devilering
+                quality work. Web developer, with extensive knowledge and years of experience
+                ,working in web technologies and UI / UX design ,devilering
                 quality work.
-                <HStack spacing="24px" justify="center" pt="4rem">
+                <HStack spacing="24px" justify="center" pt={["2rem","2rem","4rem","4rem"]}>
                   <Box w={["", "", "5vw", "5vw"]}>
                     <Heading fontSize="2xl">03+</Heading>
-                    <Text color="brand.tertiary">Years experience</Text>
+                    <Text color="brand.tertiary">Completed projects</Text>
                   </Box>
                   <Box w={["", "", "5vw", "5vw"]}>
                     <Heading fontSize="2xl">06+</Heading>
