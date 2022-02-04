@@ -82,7 +82,7 @@ export const Navbar = () => {
                   icon={isDark ? <MoonIcon /> : <SunIcon />}
                   aria-label="Mode"
                   variant="ghost"
-                  onClick={toggleColorMode}
+                  onClick={toggleColorMode}  
                 ></IconButton>
               </HStack>
             </Flex>

@@ -12,8 +12,13 @@ import {
   Box,
   useMediaQuery,
   Stack,
+  Link,
 } from "@chakra-ui/react";
 import { HiOutlineDownload } from "react-icons/hi";
+import MyCV from "../../assets/cv.pdf";
+
+
+
 export const About = () => {
   const [isNotSmallerScreen] = useMediaQuery("(min-width:768px)");
 
@@ -42,7 +47,7 @@ export const About = () => {
                 px={["2rem", "4rem", "6rem", "8rem"]}
                 fontSize="sm"
                 fontWeight="light"
-                textAlign={["center","center","start","start"]}
+                textAlign={["center", "center", "start", "start"]}
               >
                 Web developer, with extensive knowledge and years of experience
                 ,working in web technologies and UI / UX design ,devilering
@@ -63,22 +68,28 @@ export const About = () => {
                 </HStack>
                 {isNotSmallerScreen ? (
                   <Button
+                    as="a"
                     fontSize="sm"
                     rightIcon={<HiOutlineDownload />}
                     mt="3rem"
                     variant="outline"
                     color="brand.primary"
+                    href={MyCV}
+                    download ="Fede Crossetto CV"
                   >
                     Download CV
                   </Button>
                 ) : (
                   <Center>
                     <Button
+                      as="a"
                       fontSize="sm"
                       rightIcon={<HiOutlineDownload />}
                       mt="3rem"
                       variant="outline"
                       color="brand.primary"
+                      href={MyCV}
+                      download ="Fede Crossetto CV"
                     >
                       Download CV
                     </Button>

@@ -29,53 +29,63 @@ const Home = () => {
 
   return (
     <>
-      <Center pt={20} spacing={6}>
+      <Center spacing={6}>
         <Flex
-          pt={40}
+          pt="10rem"
           minWidth={{ base: "480px", sm: "767px", md: "992px", lg: "1200px" }}
         >
-          <VStack p="3rem">
-            <IconButton
-              size="lg"
-              _hover={{ color: "brand.secondary" }}
-              icon={<FiGithub />}
-              aria-label="Gitlab"
-              variant="ghost"
-            ></IconButton>
-            <IconButton
-              size="lg"
-              _hover={{ color: "brand.secondary" }}
-              icon={<SiNetlify />}
-              aria-label="Netlify"
-              variant="ghost"
-            ></IconButton>
-            <IconButton
-              size="lg"
-              _hover={{ color: "brand.secondary" }}
-              icon={<FiLinkedin />}
-              aria-label="Linkedin"
-              variant="ghost"
-            ></IconButton>
+          <VStack pt="6rem" px="4rem">
+            <Link href="https://github.com/FedeCrossetto" isExternal>
+              <IconButton
+                size="lg"
+                _hover={{ color: "brand.secondary" }}
+                icon={<FiGithub />}
+                aria-label="Gitlab"
+                variant="ghost"
+              ></IconButton>
+            </Link>
+            <Link href="https://app.netlify.com/teams/fede-vazquez-crossetto/overview" isExternal>
+              <IconButton
+                size="lg"
+                _hover={{ color: "brand.secondary" }}
+                icon={<SiNetlify />}
+                aria-label="Netlify"
+                variant="ghost"
+              ></IconButton>
+            </Link>
+            <Link href="https://ar.linkedin.com/in/federico-crossetto/en?trk=people-guest_people_search-card" isExternal>
+              <IconButton
+                size="lg"
+                _hover={{ color: "brand.secondary" }}
+                icon={<FiLinkedin />}
+                aria-label="Linkedin"
+                variant="ghost"
+              ></IconButton>
+            </Link>
           </VStack>
 
-          <VStack 
-            alignSelf={["center", "center", "start", "start"]}
-          >
+          <VStack maxW={["", "", "26rem", "26rem"]} pt="6rem">
             <Heading
-              fontSize={["2xl", "3xl", "4xl", "5xl"]}
+              fontSize={["3xl", "4xl", "5xl", "6xl"]}
               bgGradient="linear(to-r, brand.primary , brand.secondary)"
               bgClip="text"
               alignSelf={["center", "center", "start", "start"]}
             >
               Hi , I'am Fede
             </Heading>
-            <Text fontSize={["md", "lg", "xl", "2xl"]}
-                   alignSelf={["center", "center", "start", "start"]}>Frontend developer</Text>
+            <Text
+              fontSize={["lg", "xl", "2xl", "3xl"]}
+              alignSelf={["center", "center", "start", "start"]}
+            >
+              Frontend developer
+            </Text>
             <Divider variant="solid" />
-            <Text fontSize="sm"
-             fontWeight="light"
+            <Text
+              fontSize="sm"
+              fontWeight="light"
               pb="12"
-              textAlign={["center", "center", "start", "start"]}>
+              textAlign={["center", "center", "start", "start"]}
+            >
               High level experience in web design and development
               knowledge,producing quality work.
             </Text>
@@ -84,13 +94,13 @@ const Home = () => {
               color="brand.primary"
               fontSize="sm"
               variant="outline"
+              alignSelf={["center", "center", "start", "start"]}
             >
               Contact Me
             </Button>
             <Link
               href="/#"
               pt={32}
-            
               variant="ghost"
               _hover={{
                 textDecorationColor: "none",
@@ -110,6 +120,7 @@ const Home = () => {
                 outline: "none",
                 border: "none",
               }}
+              alignSelf={["center", "center", "start", "start"]}
             >
               Scroll down
               <ArrowDownIcon mx="2px" />
@@ -121,7 +132,7 @@ const Home = () => {
               top="0"
               bg="brand.secondary"
               src={messi}
-              boxSize="350px"
+              boxSize="500px"
               display={["none", "none", "flex", "flex"]}
               objectFit="contain"
               borderRadius="full"
