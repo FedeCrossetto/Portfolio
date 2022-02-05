@@ -33,11 +33,14 @@ const Home = () => {
         <Flex
           pt="10rem"
           minWidth={{ base: "480px", sm: "767px", md: "992px", lg: "1200px" }}
+          
+          borderRadius="3xl"
+          boxShadow="lg"
         >
           <VStack pt="6rem" px="4rem">
             <Link href="https://github.com/FedeCrossetto" isExternal>
               <IconButton
-                size="lg"
+                size="xl"
                 _hover={{ color: "brand.secondary" }}
                 icon={<FiGithub />}
                 aria-label="Gitlab"
@@ -100,7 +103,8 @@ const Home = () => {
             </Button>
             <Link
               href="/#"
-              pt={["10rem","10rem","8rem","8rem"]}
+              py={["10rem","10rem","8rem","8rem"]}
+
               variant="ghost"
               _hover={{
                 textDecorationColor: "none",
