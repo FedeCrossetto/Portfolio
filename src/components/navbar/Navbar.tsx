@@ -1,54 +1,35 @@
-import React, { useState, ReactNode } from "react";
+import React, { useState} from "react";
 import {
   useColorMode,
-  Switch,
   Flex,
-  Button,
   IconButton,
   Text,
-  Box,
   Link,
   HStack,
-  Stack,
-  Center,
   VStack,
+  Container,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
-import NextLink from "next/link";
+import { Link as LinkScroll} from "react-scroll";
+
 
 export const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const isDark = colorMode === "dark";
   const [display, changeDisplay] = useState("none");
   const Links = [
-    "Home",
-    "About",
-    "Skills",
-    "Services",
-    "Portfolio",
-    "Contact me",
+    { name: "Home", href: "home" },
+    { name: "About", href: "about" },
+    { name: "Skills", href: "skills" },
+    { name: "Experience", href: "experience" },
+    { name: "Portfolio", href: "portfolio" },
   ];
-
-  const NavLink = ({ children }: { children: ReactNode }) => (
-    <Link
-      px={3}
-      _hover={{
-        color: "brand.secondary",
-        textDecoration: "overline",
-        textDecorationColor: "brand.secondary",
-      }}
-      href="#"
-    >
-      {children}
-    </Link>
-  );
 
   return (
     <>
-       <Box>
-        <Center h="3rem">
+        <Container minWidth={["480px", "767px", "992px", "1200px"]} h="3rem">
           <Flex
-            minWidth={["480px","767px","992px","1200px"]}
+            minWidth={["480px", "767px", "992px", "1200px"]}
             py={1}
             bg={isDark ? "brand.dark" : "brand.light"}
             alignItems="center"
@@ -56,17 +37,53 @@ export const Navbar = () => {
             pos="fixed"
             // boxShadow="md"
           >
-            <HStack alignContent="center" fontSize="xl" px="3rem">
-              <Text pl="1.5rem" letterSpacing={1.5} >
-                Fede
+            <HStack alignContent="center" fontSize="xl" >
+              <LinkScroll to="home" spy={true} smooth={true} duration={1000}>
+                <Link                
+                  letterSpacing={1.5}
+                  _hover={{
+                    textDecoration: "none",
+                  }}
+                >
+                  Fede
+                </Link>
+              </LinkScroll>
+              <Text
+                color={[
+                  "brand.primary",
+                  "brand.secondary",
+                  "brand.primary",
+                  "brand.secondary",
+                ]}
+                fontSize="3xl"
+              >
+                _
               </Text>
-              <Text color={["brand.primary","brand.secondary","brand.primary","brand.secondary"]} fontSize="3xl">_</Text>
             </HStack>
             <Flex alignItems="flex-center">
-              <HStack as="nav" >
+              <HStack as="nav">
                 <Flex display={["none", "none", "flex", "flex"]}>
                   {Links.map((link) => (
-                    <NavLink key={link}>{link}</NavLink>
+                    <LinkScroll
+                      to={link.href}
+                      spy={true}
+                      smooth={true}
+                      // offset={50} Es para llevar mas abajo del componente.
+                      duration={1000}
+                    >
+                      {" "}
+                      <Link
+                        px={3}
+                        _hover={{
+                          color: "brand.secondary",
+                          textDecoration: "overline",
+                          textDecorationColor: "brand.secondary",
+                        }}
+                        key={link.name}
+                      >
+                        {link.name}
+                      </Link>
+                    </LinkScroll>
                   ))}
                 </Flex>
                 <Flex display={["flex", "flex", "none", "none"]}>
@@ -82,7 +99,8 @@ export const Navbar = () => {
                   icon={isDark ? <MoonIcon /> : <SunIcon />}
                   aria-label="Mode"
                   variant="ghost"
-                  onClick={toggleColorMode}  
+                  onClick={toggleColorMode}
+                  pr="2rem"
                 ></IconButton>
               </HStack>
             </Flex>
@@ -90,7 +108,7 @@ export const Navbar = () => {
 
           {/* BUGER MENU> */}
           <Flex
-            minWidth={{base:"480px" , sm:"767px" , md:"992px" , lg:"1200px"}}                  
+            minWidth={{ base: "480px", sm: "767px", md: "992px", lg: "1200px" }}
             pos="fixed"
             top="0"
             left="0"
@@ -103,48 +121,36 @@ export const Navbar = () => {
             <Flex justify="flex-start">
               <IconButton
                 aria-label="Close Menu"
-                icon={<CloseIcon />}          
+                icon={<CloseIcon />}
                 size="sm"
                 varian="ghost"
-                onClick={() => changeDisplay("none")}          
+                onClick={() => changeDisplay("none")}
               ></IconButton>
             </Flex>
-            <VStack  align="center">
-              <NextLink href="/" passHref>
-                <Button
-                  as="a"
-                  variant="ghost"
-                  aria-label="Home"                
-                  w="100%"
+            <VStack align="center">
+              {Links.map((link) => (
+                <LinkScroll
+                  to={link.href}
+                  spy={true}
+                  smooth={true}
+                  duration={1000}
                 >
-                  Home
-                </Button>
-              </NextLink>
-              <NextLink href="/about" passHref>
-                <Button
-                  as="a"
-                  variant="ghost"
-                  aria-label="About"
-                  w="100%"
-                >
-                  About
-                </Button>
-              </NextLink>
-              <NextLink href="/contact" passHref>
-                <Button
-                  as="a"
-                  variant="ghost"
-                  aria-label="Contact"
-                  w="100%"
-                >
-                  Contact
-                </Button>
-              </NextLink>
+                  {" "}
+                  <Link
+                    variant="ghost"
+                    aria-label="Home"
+                    w="100%"
+                    key={link.name}
+                  >
+                    {link.name}
+                  </Link>
+                </LinkScroll>
+              ))}
             </VStack>
           </Flex>
-        </Center>
-        </Box>
+        </Container>
     </>
   );
 };
 export default Navbar;
+

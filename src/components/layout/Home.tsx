@@ -12,6 +12,9 @@ import {
   useMediaQuery,
   Image,
   Button,
+  Container,
+  Stack,
+  HStack,
 } from "@chakra-ui/react";
 import {
   ArrowForwardIcon,
@@ -29,15 +32,12 @@ const Home = () => {
 
   return (
     <>
-      <Center spacing={6}>
+     <Container minWidth={["480px", "767px", "992px", "1200px"]} pt={["2rem","4rem","8rem","10rem"]} id="home">
         <Flex
-          pt="10rem"
-          minWidth={{ base: "480px", sm: "767px", md: "992px", lg: "1200px" }}
-          
-          borderRadius="3xl"
-          boxShadow="lg"
+          justify="center"
         >
-          <VStack pt="6rem" px="4rem">
+          
+          <VStack  mr={["1rem","1rem","4rem","4rem"]}>
             <Link href="https://github.com/FedeCrossetto" isExternal>
               <IconButton
                 size="xl"
@@ -67,7 +67,18 @@ const Home = () => {
             </Link>
           </VStack>
 
-          <VStack maxW={["", "", "26rem", "26rem"]} pt="6rem">
+          <VStack maxW={["", "", "26rem", "26rem"]} >  
+          <Image
+              ml="2rem"
+              top="0"
+              bg="brand.secondary"
+              src={messi}
+              boxSize="250px"
+              display={["flex", "flex","none", "none"]}
+              objectFit="contain"
+              borderRadius="full"
+              alt="Me"
+            ></Image>     
             <Heading
               fontSize={["3xl", "4xl", "5xl", "6xl"]}
               bgGradient="linear(to-r, brand.primary , brand.secondary)"
@@ -91,7 +102,9 @@ const Home = () => {
             >
               High level experience in web design and development
               knowledge,producing quality work.
+              
             </Text>
+         
             <Button
               rightIcon={<ArrowForwardIcon />}
               color="brand.primary"
@@ -130,7 +143,7 @@ const Home = () => {
               <ArrowDownIcon mx="2px" />
             </Link>
           </VStack>
-          <VStack>
+          <VStack>           
             <Image
               ml="2rem"
               top="0"
@@ -144,7 +157,7 @@ const Home = () => {
             ></Image>
           </VStack>
         </Flex>
-      </Center>
+      </Container>
     </>
   );
 };

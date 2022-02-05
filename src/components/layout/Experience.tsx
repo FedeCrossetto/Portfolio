@@ -25,7 +25,7 @@ const Experience = () => {
   const [isNotSmallerScreen] = useMediaQuery("(min-width:480px)");
   return (
     <>
-      <Container minWidth={["480px", "767px", "992px", "1200px"]} pt="14rem">
+      <Container minWidth={["480px", "767px", "992px", "1200px"]} pt="18rem" id="experience">
         <Flex justify="center">
           <VStack>
             <Heading fontSize={["2xl", "3xl", "4xl", "5xl"]}>

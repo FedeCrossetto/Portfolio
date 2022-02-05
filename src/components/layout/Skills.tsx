@@ -27,7 +27,7 @@ import { FiGitPullRequest, FiDatabase } from "react-icons/fi";
 
 const Skills = () => {
   return (
-    <Container minWidth={["480px", "767px", "992px", "1200px"]} pt="14rem" >
+    <Container minWidth={["480px", "767px", "992px", "1200px"]} pt="14rem" id="skills">
       <Flex justify="center">
         <VStack>
           <Heading fontSize={["2xl", "3xl", "4xl", "5xl"]}>Skills</Heading>
@@ -57,17 +57,17 @@ const Skills = () => {
               </AccordionButton>
             </h2>
             <AccordionPanel pb={4}>
-              <HStack justifyContent="space-between">
-                <Text>React.js</Text>
+              <HStack justifyContent="space-between" mt="0.8rem">
+                <Text >React.js</Text>
                 <Text>90 %</Text>
               </HStack>
               <Progress value={90} size='xs' colorScheme='purple' />
-                                        <HStack justifyContent="space-between">
+            <HStack justifyContent="space-between" mt="0.8rem">
                 <Text>Angular</Text>
                 <Text>20 %</Text>
               </HStack>
               <Progress value={20} size='xs' colorScheme='purple' />
-                        <HStack justifyContent="space-between">
+            <HStack justifyContent="space-between" mt="0.8rem">
                 <Text>.NET Core</Text>
                 <Text>70 %</Text>
               </HStack>
@@ -76,8 +76,8 @@ const Skills = () => {
           </AccordionItem>
 
           <AccordionItem>
-            <h2>
-              <AccordionButton>
+            <h2 >
+              <AccordionButton >
                 <Box mr="1rem" color="brand.secondary" fontSize="lg">
                   <SiNodedotjs />
                 </Box>
@@ -88,17 +88,17 @@ const Skills = () => {
               </AccordionButton>
             </h2>
             <AccordionPanel pb={4}>
-               <HStack justifyContent="space-between">
+               <HStack justifyContent="space-between" mt="0.8rem">
                 <Text>.NET Core</Text>
                 <Text>70 %</Text>
               </HStack>
               <Progress value={70} size='xs' colorScheme='purple' />
-              <HStack justifyContent="space-between">
+              <HStack justifyContent="space-between" mt="0.8rem">
                 <Text>.NET Core</Text>
                 <Text>70 %</Text>
               </HStack>
               <Progress value={70} size='xs' colorScheme='purple' />
-               <HStack justifyContent="space-between">
+               <HStack justifyContent="space-between" mt="0.8rem">
                 <Text>.NET Core</Text>
                 <Text>70 %</Text>
               </HStack>
@@ -118,17 +118,17 @@ const Skills = () => {
               </AccordionButton>
             </h2>
             <AccordionPanel pb={4}>
-               <HStack justifyContent="space-between">
+               <HStack justifyContent="space-between" mt="0.8rem">
                 <Text>.NET Core</Text>
                 <Text>70 %</Text>
               </HStack>
               <Progress value={70} size='xs' colorScheme='purple' />
-                <HStack justifyContent="space-between">
+                <HStack justifyContent="space-between" mt="0.8rem">
                 <Text>.NET Core</Text>
                 <Text>70 %</Text>
               </HStack>
               <Progress value={70} size='xs' colorScheme='purple' />
-                <HStack justifyContent="space-between">
+                <HStack justifyContent="space-between" mt="0.8rem">
                 <Text>.NET Core</Text>
                 <Text>70 %</Text>
               </HStack>
@@ -149,17 +149,17 @@ const Skills = () => {
               </AccordionButton>
             </h2>
             <AccordionPanel pb={4}>
-                <HStack justifyContent="space-between">
+                <HStack justifyContent="space-between" mt="0.8rem">
                 <Text>.NET Core</Text>
                 <Text>70 %</Text>
               </HStack>
               <Progress value={20} size='xs' colorScheme='purple' />
-                <HStack justifyContent="space-between">
+                <HStack justifyContent="space-between" mt="0.8rem">
                 <Text>.NET Core</Text>
                 <Text>70 %</Text>
               </HStack>
               <Progress value={20} size='xs' colorScheme='purple' />
-                <HStack justifyContent="space-between">
+                <HStack justifyContent="space-between" mt="0.8rem">
                 <Text>.NET Core</Text>
                 <Text>70 %</Text>
               </HStack>
