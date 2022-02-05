@@ -5,6 +5,7 @@ import Home from "./components/layout/Home";
 import theme from "./theme/theme";
 import Skills from "./components/layout/Skills";
 import About from "./components/layout/About";
+import Experience from "./components/layout/Experience";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Home />
       <About />
       <Skills />
+      <Experience/>
     </ChakraProvider>
   );
 }
