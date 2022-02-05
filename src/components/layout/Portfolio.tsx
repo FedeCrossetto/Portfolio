@@ -16,7 +16,7 @@ import Cards from "./Cards";
 const Portfolio = () => {
   return (
     <>
-      <Container minWidth={["480px", "767px", "992px", "1200px"]} pt="14rem">
+      <Container minWidth={["480px", "767px", "992px", "1200px"]} pt="14rem" id="portfolio">
         <Flex justify="center">
           <VStack>
             <Heading fontSize={["2xl", "3xl", "4xl", "5xl"]}>Portfolio</Heading>
@@ -27,13 +27,13 @@ const Portfolio = () => {
             >
               Some recent works
             </Text>   
-          <Tabs colorScheme="purple">
+          <Tabs colorScheme="purple" >
             <TabList >
-              <Tab fontWeight="bold">ALL</Tab>
-              <Tab fontWeight="bold">WEB DEVELOPMENT</Tab>
-              <Tab fontWeight="bold">LANDING</Tab>
-              <Tab fontWeight="bold">E-COMMERCE</Tab>
-              <Tab fontWeight="bold">E-LEARNING</Tab>
+              <Tab fontWeight="bold" fontSize="sm" >ALL</Tab>
+              <Tab fontWeight="bold" fontSize="sm">WEB DEVELOPMENT</Tab>
+              <Tab fontWeight="bold" fontSize="sm">LANDING</Tab>
+              <Tab fontWeight="bold" fontSize="sm">E-COMMERCE</Tab>
+              <Tab fontWeight="bold" fontSize="sm">E-LEARNING</Tab>
             </TabList>
 
             <TabPanels>

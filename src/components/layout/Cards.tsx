@@ -6,21 +6,21 @@ const Cards = () => {
     <>
       <HStack direction="row">
         <Image
-          boxSize="200px"
+          boxSize="100px"
           objectFit="cover"
           src="https://bit.ly/dan-abramov"
           alt="Dan Abramov"
           borderRadius="xl"
         />
         <Image
-          boxSize="200px"
+          boxSize="100px"
           objectFit="cover"
           src="https://bit.ly/dan-abramov"
           alt="Dan Abramov"
           borderRadius="xl"
         />
         <Image
-          boxSize="200px"
+          boxSize="100px"
           src="https://bit.ly/dan-abramov"
           alt="Dan Abramov"
           borderRadius="xl"
