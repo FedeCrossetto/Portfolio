@@ -12,6 +12,7 @@ import {
   Flex,
   Heading,
   HStack,
+  Progress,
   Slider,
   SliderFilledTrack,
   SliderThumb,
@@ -31,7 +32,7 @@ const Skills = () => {
         <VStack>
           <Heading fontSize={["2xl", "3xl", "4xl", "5xl"]}>Skills</Heading>
           <Text
-            fontSize={["sm", "md", "lg", "lg"]}
+            fontSize={["sm", "md", "md", "md"]}
             color="brand.tertiary"
             pb="6rem"
           >
@@ -56,40 +57,21 @@ const Skills = () => {
               </AccordionButton>
             </h2>
             <AccordionPanel pb={4}>
-              {/*------------------------------------------------------------ /PROGRESS BAR ------------------------------------------------------------ */}
               <HStack justifyContent="space-between">
                 <Text>React.js</Text>
                 <Text>90 %</Text>
               </HStack>
-              <Slider aria-label="slider-ex-1" value={90} colorScheme="purple">
-                <SliderTrack>
-                  <SliderFilledTrack />
-                </SliderTrack>
-                <SliderThumb />
-              </Slider>
-              {/*------------------------------------------------------------ PROGRESS BAR ------------------------------------------------------------ */}
-              <HStack justifyContent="space-between">
+              <Progress value={90} size='xs' colorScheme='purple' />
+                                        <HStack justifyContent="space-between">
                 <Text>Angular</Text>
                 <Text>20 %</Text>
               </HStack>
-              <Slider aria-label="slider-ex-1" value={20} colorScheme="purple">
-                <SliderTrack>
-                  <SliderFilledTrack />
-                </SliderTrack>
-                <SliderThumb />
-              </Slider>
-              {/*------------------------------------------------------------ /PROGRESS BAR ------------------------------------------------------------ */}
-             <HStack justifyContent="space-between">
+              <Progress value={20} size='xs' colorScheme='purple' />
+                        <HStack justifyContent="space-between">
                 <Text>.NET Core</Text>
                 <Text>70 %</Text>
               </HStack>
-              <Slider aria-label="slider-ex-1" value={70} colorScheme="purple">
-                <SliderTrack>
-                  <SliderFilledTrack />
-                </SliderTrack>
-                <SliderThumb />
-              </Slider>
-              {/*------------------------------------------------------------  /PROGRESS BAR ------------------------------------------------------------ */}
+              <Progress value={70} size='xs' colorScheme='purple' />
             </AccordionPanel>
           </AccordionItem>
 
@@ -106,42 +88,23 @@ const Skills = () => {
               </AccordionButton>
             </h2>
             <AccordionPanel pb={4}>
-               {/*------------------------------------------------------------ PROGRESS BAR ------------------------------------------------------------ */}
                <HStack justifyContent="space-between">
                 <Text>.NET Core</Text>
                 <Text>70 %</Text>
               </HStack>
-              <Slider aria-label="slider-ex-1" value={70} colorScheme="purple">
-                <SliderTrack>
-                  <SliderFilledTrack />
-                </SliderTrack>
-                <SliderThumb />
-              </Slider>
-              {/*------------------------------------------------------------  /PROGRESS BAR ------------------------------------------------------------ */}
+              <Progress value={70} size='xs' colorScheme='purple' />
               <HStack justifyContent="space-between">
                 <Text>.NET Core</Text>
                 <Text>70 %</Text>
               </HStack>
-              <Slider aria-label="slider-ex-1" value={70} colorScheme="purple">
-                <SliderTrack>
-                  <SliderFilledTrack />
-                </SliderTrack>
-                <SliderThumb />
-              </Slider>
-              {/*------------------------------------------------------------  /PROGRESS BAR ------------------------------------------------------------ */}                <HStack justifyContent="space-between">
+              <Progress value={70} size='xs' colorScheme='purple' />
+               <HStack justifyContent="space-between">
                 <Text>.NET Core</Text>
                 <Text>70 %</Text>
               </HStack>
-              <Slider aria-label="slider-ex-1" value={70} colorScheme="purple">
-                <SliderTrack>
-                  <SliderFilledTrack />
-                </SliderTrack>
-                <SliderThumb />
-              </Slider>
-              {/*------------------------------------------------------------  /PROGRESS BAR ------------------------------------------------------------ */}
+              <Progress value={70} size='xs' colorScheme='purple' />
             </AccordionPanel>
           </AccordionItem>
-
           <AccordionItem>
             <h2>
               <AccordionButton>
@@ -155,40 +118,21 @@ const Skills = () => {
               </AccordionButton>
             </h2>
             <AccordionPanel pb={4}>
-               {/*------------------------------------------------------------ PROGRESS BAR ------------------------------------------------------------ */}
                <HStack justifyContent="space-between">
                 <Text>.NET Core</Text>
                 <Text>70 %</Text>
               </HStack>
-              <Slider aria-label="slider-ex-1" value={70} colorScheme="purple">
-                <SliderTrack>
-                  <SliderFilledTrack />
-                </SliderTrack>
-                <SliderThumb />
-              </Slider>
-              {/*------------------------------------------------------------  /PROGRESS BAR ------------------------------------------------------------ */}
+              <Progress value={70} size='xs' colorScheme='purple' />
                 <HStack justifyContent="space-between">
                 <Text>.NET Core</Text>
                 <Text>70 %</Text>
               </HStack>
-              <Slider aria-label="slider-ex-1" value={70} colorScheme="purple">
-                <SliderTrack>
-                  <SliderFilledTrack />
-                </SliderTrack>
-                <SliderThumb />
-              </Slider>
-              {/*------------------------------------------------------------  /PROGRESS BAR ------------------------------------------------------------ */}
+              <Progress value={70} size='xs' colorScheme='purple' />
                 <HStack justifyContent="space-between">
                 <Text>.NET Core</Text>
                 <Text>70 %</Text>
               </HStack>
-              <Slider aria-label="slider-ex-1" value={70} colorScheme="purple">
-                <SliderTrack>
-                  <SliderFilledTrack />
-                </SliderTrack>
-                <SliderThumb />
-              </Slider>
-              {/*------------------------------------------------------------  /PROGRESS BAR ------------------------------------------------------------ */}
+              <Progress value={70} size='xs' colorScheme='purple' />
             </AccordionPanel>
           </AccordionItem>
 
@@ -205,40 +149,21 @@ const Skills = () => {
               </AccordionButton>
             </h2>
             <AccordionPanel pb={4}>
-                {/*------------------------------------------------------------ PROGRESS BAR ------------------------------------------------------------ */}
                 <HStack justifyContent="space-between">
                 <Text>.NET Core</Text>
                 <Text>70 %</Text>
               </HStack>
-              <Slider aria-label="slider-ex-1" value={70} colorScheme="purple">
-                <SliderTrack>
-                  <SliderFilledTrack />
-                </SliderTrack>
-                <SliderThumb />
-              </Slider>
-              {/*------------------------------------------------------------  /PROGRESS BAR ------------------------------------------------------------ */}
+              <Progress value={20} size='xs' colorScheme='purple' />
                 <HStack justifyContent="space-between">
                 <Text>.NET Core</Text>
                 <Text>70 %</Text>
               </HStack>
-              <Slider aria-label="slider-ex-1" value={70} colorScheme="purple">
-                <SliderTrack>
-                  <SliderFilledTrack />
-                </SliderTrack>
-                <SliderThumb />
-              </Slider>
-              {/*------------------------------------------------------------  /PROGRESS BAR ------------------------------------------------------------ */}
+              <Progress value={20} size='xs' colorScheme='purple' />
                 <HStack justifyContent="space-between">
                 <Text>.NET Core</Text>
                 <Text>70 %</Text>
               </HStack>
-              <Slider aria-label="slider-ex-1" value={70} colorScheme="purple">
-                <SliderTrack>
-                  <SliderFilledTrack />
-                </SliderTrack>
-                <SliderThumb />
-              </Slider>
-              {/*------------------------------------------------------------  /PROGRESS BAR ------------------------------------------------------------ */}
+              <Progress value={20} size='xs' colorScheme='purple' />
             </AccordionPanel>
           </AccordionItem>
         </Accordion>

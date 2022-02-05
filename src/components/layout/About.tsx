@@ -28,7 +28,7 @@ export const About = () => {
         <Flex justify="center">
           <VStack>
             <Heading fontSize={["2xl", "3xl", "4xl", "5xl"]}>About Me</Heading>
-            <Text fontSize={["sm", "md", "lg", "lg"]} color="brand.tertiary">
+            <Text fontSize={["sm", "md", "md", "md"]} color="brand.tertiary">
               My Introduction
             </Text>
             <Stack
