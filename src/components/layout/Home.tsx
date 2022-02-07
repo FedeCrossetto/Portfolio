@@ -15,6 +15,7 @@ import {
   Container,
   Stack,
   HStack,
+  Tooltip,
 } from "@chakra-ui/react";
 import {
   ArrowForwardIcon,
@@ -37,8 +38,9 @@ const Home = () => {
           justify="center"
         >
           
-          <VStack  mr={["1rem","1rem","4rem","4rem"]}>
+          <VStack  mr={["1rem","1rem","4rem","4rem"]} mt={["4rem","3rem","2rem",""]}>
             <Link href="https://github.com/FedeCrossetto" isExternal>
+            <Tooltip label='GitHub' placement='left'>
               <IconButton
                 size="xl"
                 _hover={{ color: "brand.secondary" }}
@@ -46,8 +48,10 @@ const Home = () => {
                 aria-label="Gitlab"
                 variant="ghost"
               ></IconButton>
+                </Tooltip>
             </Link>
             <Link href="https://app.netlify.com/teams/fede-vazquez-crossetto/overview" isExternal>
+            <Tooltip label='Netlify' placement='left'>
               <IconButton
                 size="lg"
                 _hover={{ color: "brand.secondary" }}
@@ -55,8 +59,10 @@ const Home = () => {
                 aria-label="Netlify"
                 variant="ghost"
               ></IconButton>
+              </Tooltip>
             </Link>
             <Link href="https://ar.linkedin.com/in/federico-crossetto/en?trk=people-guest_people_search-card" isExternal>
+            <Tooltip label='Linkedin' placement='left'>
               <IconButton
                 size="lg"
                 _hover={{ color: "brand.secondary" }}
@@ -64,6 +70,7 @@ const Home = () => {
                 aria-label="Linkedin"
                 variant="ghost"
               ></IconButton>
+                   </Tooltip>
             </Link>
           </VStack>
 
