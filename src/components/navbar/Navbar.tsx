@@ -8,9 +8,13 @@ import {
   HStack,
   VStack,
   Container,
+  Box,
+  Image
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
-import { Link as LinkScroll} from "react-scroll";
+import { Link as LinkScroll ,animateScroll as scroll} from "react-scroll";
+import {motion} from "framer-motion";
+import logoo from "../../assets/logoo.png";
 
 
 export const Navbar = () => {
@@ -25,9 +29,11 @@ export const Navbar = () => {
     { name: "Portfolio", href: "portfolio" },
   ];
 
+  const MotionBox = motion(Box)
+
   return (
     <>
-        <Container minWidth={["480px", "767px", "992px", "1200px"]} h="3rem">
+        <Container minWidth={["480px", "767px", "992px", "1200px"]} h="3rem" >
           <Flex
             minWidth={["480px", "767px", "992px", "1200px"]}
             py={1}
@@ -38,17 +44,19 @@ export const Navbar = () => {
             // boxShadow="md"
           >
             <HStack alignContent="center" fontSize="xl" >
-              <LinkScroll to="home" spy={true} smooth={true} duration={1000}>
                 <Link                
                   letterSpacing={1.5}
                   _hover={{
                     textDecoration: "none",
                   }}
+                  onClick={() => scroll.scrollToTop()}
+                  ml={["","1.5rem","","3.5rem"]}
                 >
-                  Fede
+                  {/* Fede */}
+                    <Image  h="4rem" src={logoo}></Image>
                 </Link>
-              </LinkScroll>
-              <Text
+              
+              {/* <Text
                 color={[
                   "brand.primary",
                   "brand.secondary",
@@ -58,7 +66,8 @@ export const Navbar = () => {
                 fontSize="3xl"
               >
                 _
-              </Text>
+              </Text> */}
+              {/* <Image  h="4rem" src={logoo}></Image> */}
             </HStack>
             <Flex alignItems="flex-center">
               <HStack as="nav">

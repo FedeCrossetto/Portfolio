@@ -43,10 +43,10 @@ const Skills = () => {
       </Flex>
       <VStack>
         {/*------------------------------------------------------------ ACORDION ------------------------------------------------------------ */}
-        <Accordion allowToggle minWidth={["480px", "767px", "992px", "1200px"]}>
+        <Accordion allowToggle minWidth={["480px", "570px", "670px", "970px"]}>
           <AccordionItem>
             <h2>
-              <AccordionButton>
+              <AccordionButton mx="1rem" >
                 <Box mr="1rem" color="brand.secondary" fontSize="lg">
                   <SiReact />
                 </Box>
@@ -77,7 +77,7 @@ const Skills = () => {
 
           <AccordionItem>
             <h2 >
-              <AccordionButton >
+              <AccordionButton mx="1rem">
                 <Box mr="1rem" color="brand.secondary" fontSize="lg">
                   <SiNodedotjs />
                 </Box>
@@ -107,7 +107,7 @@ const Skills = () => {
           </AccordionItem>
           <AccordionItem>
             <h2>
-              <AccordionButton>
+              <AccordionButton mx="1rem">
                 <Box mr="1rem" color="brand.secondary" fontSize="lg">
                   <FiDatabase />
                 </Box>
@@ -138,7 +138,7 @@ const Skills = () => {
 
           <AccordionItem>
             <h2>
-              <AccordionButton>
+              <AccordionButton mx="1rem">
                 <Box mr="1rem" color="brand.secondary" fontSize="lg">
                   <FiGitPullRequest />
                 </Box>

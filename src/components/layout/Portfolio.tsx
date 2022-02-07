@@ -16,7 +16,7 @@ import Cards from "./Cards";
 const Portfolio = () => {
   return (
     <>
-      <Container minWidth={["480px", "767px", "992px", "1200px"]} pt="14rem" id="portfolio">
+      <Container minWidth={["480px", "767px", "992px", "1200px"]} pt="20rem" id="portfolio">
         <Flex justify="center">
           <VStack>
             <Heading fontSize={["2xl", "3xl", "4xl", "5xl"]}>Portfolio</Heading>
