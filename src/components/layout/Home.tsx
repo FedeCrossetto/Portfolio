@@ -8,84 +8,104 @@ import {
   IconButton,
   Link,
   Divider,
-  Center,
   useMediaQuery,
   Image,
   Button,
   Container,
-  Stack,
-  HStack,
   Tooltip,
+  Stack,
 } from "@chakra-ui/react";
-import {
-  ArrowForwardIcon,
-  ArrowDownIcon
-} from "@chakra-ui/icons";
+import { ArrowForwardIcon, ArrowDownIcon } from "@chakra-ui/icons";
 import { SiNetlify } from "react-icons/si";
 import { FiGithub, FiLinkedin } from "react-icons/fi";
-import { TiArrowRightOutline, TiArrowDownOutline } from "react-icons/ti";
 import { BsMouse3 } from "react-icons/bs";
 import portfolio from "../../assets/portfolio.png";
 import messi from "../../assets/messi.png";
+import {
+  MotionFlex,
+  MotionStack,
+  AnimationFlex,
+  AnimationSpring,
+  AnimationTransition,
+  showComponent,
+} from "../../styles/animation";
+
+import { motion } from "framer-motion";
 
 const Home = () => {
   const [isNotSmallerScreen] = useMediaQuery("(min-width:768px)");
 
   return (
     <>
-     <Container minWidth={["480px", "767px", "992px", "1200px"]} pt={["2rem","4rem","8rem","10rem"]} id="home">
-        <Flex
+      <Container
+        minWidth={["480px", "767px", "992px", "1200px"]}
+        pt={["2rem", "4rem", "8rem", "10rem"]}
+        id="home"
+      >
+        <MotionFlex
           justify="center"
+          initial="hidden"
+          animate="visible"
+          variants={showComponent}
         >
-          
-          <VStack  mr={["1rem","1rem","4rem","4rem"]} mt={["4rem","3rem","2rem",""]}>
+          <VStack
+            // direction="column"
+            mr={["1rem", "1rem", "4rem", "4rem"]}
+            mt={["4rem", "3rem", "2rem", ""]}
+          >
             <Link href="https://github.com/FedeCrossetto" isExternal>
-            <Tooltip label='GitHub' placement='left'>
-              <IconButton
-                size="xl"
-                _hover={{ color: "brand.secondary" }}
-                icon={<FiGithub />}
-                aria-label="Gitlab"
-                variant="ghost"
-              ></IconButton>
-                </Tooltip>
-            </Link>
-            <Link href="https://app.netlify.com/teams/fede-vazquez-crossetto/overview" isExternal>
-            <Tooltip label='Netlify' placement='left'>
-              <IconButton
-                size="lg"
-                _hover={{ color: "brand.secondary" }}
-                icon={<SiNetlify />}
-                aria-label="Netlify"
-                variant="ghost"
-              ></IconButton>
+              <Tooltip label="GitHub" placement="left">
+                <IconButton
+                  size="lg"
+                  _hover={{ color: "brand.secondary" }}
+                  icon={<FiGithub />}
+                  aria-label="Gitlab"
+                  variant="ghost"
+                ></IconButton>
               </Tooltip>
             </Link>
-            <Link href="https://ar.linkedin.com/in/federico-crossetto/en?trk=people-guest_people_search-card" isExternal>
-            <Tooltip label='Linkedin' placement='left'>
-              <IconButton
-                size="lg"
-                _hover={{ color: "brand.secondary" }}
-                icon={<FiLinkedin />}
-                aria-label="Linkedin"
-                variant="ghost"
-              ></IconButton>
-                   </Tooltip>
+            <Link
+              href="https://app.netlify.com/teams/fede-vazquez-crossetto/overview"
+              isExternal
+            >
+              <Tooltip label="Netlify" placement="left">
+                <IconButton
+                  size="lg"
+                  _hover={{ color: "brand.secondary" }}
+                  icon={<SiNetlify />}
+                  aria-label="Netlify"
+                  variant="ghost"
+                ></IconButton>
+              </Tooltip>
+            </Link>
+            <Link
+              href="https://ar.linkedin.com/in/federico-crossetto/en?trk=people-guest_people_search-card"
+              isExternal
+            >
+              <Tooltip label="Linkedin" placement="left">
+                <IconButton
+                  size="lg"
+                  _hover={{ color: "brand.secondary" }}
+                  icon={<FiLinkedin />}
+                  aria-label="Linkedin"
+                  variant="ghost"
+                ></IconButton>
+              </Tooltip>
             </Link>
           </VStack>
 
-          <VStack maxW={["", "", "26rem", "26rem"]} >  
-          <Image
+          <VStack maxW={["", "", "26rem", "26rem"]}>
+            <Image
               ml="2rem"
               top="0"
               bg="brand.secondary"
               src={messi}
               boxSize="250px"
-              display={["flex", "flex","none", "none"]}
+              display={["flex", "flex", "none", "none"]}
               objectFit="contain"
               borderRadius="full"
               alt="Me"
-            ></Image>     
+            ></Image>
             <Heading
               fontSize={["3xl", "4xl", "5xl", "6xl"]}
               bgGradient="linear(to-r, brand.primary , brand.secondary)"
@@ -109,48 +129,70 @@ const Home = () => {
             >
               High level experience in web design and development
               knowledge,producing quality work.
-              
             </Text>
-         
-            <Button
-              rightIcon={<ArrowForwardIcon />}
-              color="brand.primary"
-              fontSize="sm"
-              variant="outline"
+            <MotionStack
+              // whileHover="whileHover"
+              whileTap="whileTap"
+              variants={AnimationTransition}
               alignSelf={["center", "center", "start", "start"]}
             >
-              Contact Me
-            </Button>
-            <Link
-              href="/#"
-              py={["10rem","10rem","8rem","8rem"]}
+              <Button
+                rightIcon={<ArrowForwardIcon />}
+                color="brand.primary"
+                fontSize="sm"
+                variant="outline"
+              >
+                Contact Me
+              </Button>
+            </MotionStack>
 
-              variant="ghost"
-              _hover={{
-                textDecorationColor: "none",
-                boxShadow: "none",
-                outline: "none",
-                border: "none",
-              }}
-              _visited={{
-                textDecorationColor: "none",
-                boxShadow: "none",
-                outline: "none",
-                border: "none",
-              }}
-              _active={{
-                textDecorationColor: "none",
-                boxShadow: "none",
-                outline: "none",
-                border: "none",
-              }}
+            <MotionStack
+              initial="hidden"
+              animate="visible"
+              variants={AnimationSpring}
+              justifyContent="center"
               alignSelf={["center", "center", "start", "start"]}
+              pt={["4rem","8rem","10rem","12rem"]}
             >
-              Scroll down
-              <ArrowDownIcon mx="2px" />
-            </Link>
+              <Link
+                href="/#"
+                pt={["10rem", "10rem", "8rem", "8rem"]}
+                variant="ghost"
+                _hover={{
+                  textDecorationColor: "none",
+                  boxShadow: "none",
+                  outline: "none",
+                  border: "none",
+                }}
+              >
+                <Stack
+                  _hover={{
+                    textDecorationColor: "none",
+                    boxShadow: "none",
+                    outline: "none",
+                    border: "none",
+                  }}
+                  _visited={{
+                    textDecorationColor: "none",
+                    boxShadow: "none",
+                    outline: "none",
+                    border: "none",
+                  }}
+                  _active={{
+                    textDecorationColor: "none",
+                    boxShadow: "none",
+                    outline: "none",
+                    border: "none",
+                  }}
+                >
+                  <Text fontSize="xs">Scroll down</Text>
+                  <ArrowDownIcon alignSelf="center" justifyContent="center" />
+                </Stack>
+              </Link>
+              {/* <IconButton aria-label="Scroll down" icon={<BsMouse3 />} /> */}
+            </MotionStack>
           </VStack>
-          <VStack>           
+          <VStack>
             <Image
               ml="2rem"
               top="0"
@@ -163,7 +205,7 @@ const Home = () => {
               alt="Me"
             ></Image>
           </VStack>
-        </Flex>
+        </MotionFlex>
       </Container>
     </>
   );

@@ -95,7 +95,7 @@ export const Navbar = () => {
                     </LinkScroll>
                   ))}
                 </Flex>
-                <Flex display={["flex", "flex", "none", "none"]}>
+                <Flex display={["flex", "flex", "none", "none"]} >
                   <IconButton
                     icon={<HamburgerIcon />}
                     aria-label="Open Menu"
@@ -104,13 +104,16 @@ export const Navbar = () => {
                     onClick={() => changeDisplay("flex")}
                   ></IconButton>
                 </Flex>
+                <Flex    pr="1rem">
+
                 <IconButton
                   icon={isDark ? <MoonIcon /> : <SunIcon />}
                   aria-label="Mode"
                   variant="ghost"
                   onClick={toggleColorMode}
-                  pr="2rem"
-                ></IconButton>
+                  
+                  ></IconButton>
+                  </Flex>
               </HStack>
             </Flex>
           </Flex>
