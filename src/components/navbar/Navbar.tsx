@@ -3,164 +3,199 @@ import {
   useColorMode,
   Flex,
   IconButton,
-  Text,
   Link,
   HStack,
   VStack,
   Container,
-  Box,
-  Image
+  Image,
+  useMediaQuery,
+  Grid,
+  Center,
+  Tooltip
 } from "@chakra-ui/react";
-import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
+import { HamburgerIcon,MoonIcon, SunIcon,SmallCloseIcon } from "@chakra-ui/icons";
+import { FaSlideshare } from "react-icons/fa";
+import { BsBarChart ,BsTelephone} from "react-icons/bs";
+import { HiOutlineHome ,HiCode } from "react-icons/hi";
+import { RiContactsLine  } from "react-icons/ri";
 import { Link as LinkScroll ,animateScroll as scroll} from "react-scroll";
-import {motion} from "framer-motion";
 import logoo from "../../assets/logoo.png";
+import {
+  MotionFlex,
+  showToggleMode,
+} from "../../styles/animation";
+
+
 
 
 export const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const isDark = colorMode === "dark";
   const [display, changeDisplay] = useState("none");
-  const Links = [
-    { name: "Home", href: "home" },
-    { name: "About", href: "about" },
-    { name: "Skills", href: "skills" },
-    { name: "Experience", href: "experience" },
-    { name: "Portfolio", href: "portfolio" },
-  ];
+  const [isNotSmallerScreen] = useMediaQuery("(min-width:768px)");
 
-  const MotionBox = motion(Box)
+  const Links = [
+    { name: "Home", href: "home" , icon:<HiOutlineHome /> },
+    { name: "About", href: "about", icon:<RiContactsLine /> },
+    { name: "Skills", href: "skills", icon:<BsBarChart /> },
+    { name: "Experience", href: "experience",icon:<HiCode />  },
+    { name: "Portfolio", href: "portfolio",icon:<FaSlideshare /> },
+    { name: "Contact me", href: "contactme", icon:<BsTelephone /> },
+  ];
 
   return (
     <>
-        <Container minWidth={["480px", "767px", "992px", "1200px"]} h="3rem" >
-          <Flex
-            minWidth={["480px", "767px", "992px", "1200px"]}
-            py={1}
-            bg={isDark ? "brand.dark" : "brand.light"}
-            alignItems="center"
-            justifyContent="space-between"
-            pos="fixed"
-            // boxShadow="md"
-          >
-            <HStack alignContent="center" fontSize="xl" >
-                <Link                
-                  letterSpacing={1.5}
-                  _hover={{
-                    textDecoration: "none",
-                  }}
-                  onClick={() => scroll.scrollToTop()}
-                  ml={["","1.5rem","","3.5rem"]}
-                >
-                  {/* Fede */}
-                    <Image  h="4rem" src={logoo}></Image>
-                </Link>
-              
-              {/* <Text
-                color={[
-                  "brand.primary",
-                  "brand.secondary",
-                  "brand.primary",
-                  "brand.secondary",
-                ]}
-                fontSize="3xl"
-              >
-                _
-              </Text> */}
-              {/* <Image  h="4rem" src={logoo}></Image> */}
-            </HStack>
-            <Flex alignItems="flex-center">
-              <HStack as="nav">
-                <Flex display={["none", "none", "flex", "flex"]}>
-                  {Links.map((link) => (
-                    <LinkScroll
-                      to={link.href}
-                      spy={true}
-                      smooth={true}
-                      // offset={50} Es para llevar mas abajo del componente.
-                      duration={1000}
+      <Container minWidth={["480px", "767px", "992px", "1200px"]} h="3rem">
+        <Flex
+          minWidth={["480px", "767px", "992px", "1200px"]}
+          py={1}
+          bg={isDark ? "brand.dark" : "brand.light"}
+          alignItems="center"
+          justifyContent="space-between"
+          pos="fixed"
+          bottom={isNotSmallerScreen ? "" : "0"}
+        >
+          <HStack alignContent="center" fontSize="xl">
+            <Link
+              letterSpacing={1.5}
+              _hover={{
+                textDecoration: "none",
+              }}
+              onClick={() => scroll.scrollToTop()}
+              ml={["", "1.5rem", "", "3.5rem"]}
+              pb={["1rem", "1rem", "", ""]}
+            >
+              <Image h="4rem" src={logoo} />
+            </Link>
+          </HStack>
+          <Flex alignItems="flex-center">
+            <HStack as="nav">
+              <Flex display={["none", "none", "flex", "flex"]}>
+                {Links.map((link) => (
+                  <LinkScroll
+                    to={link.href}
+                    spy={true}
+                    smooth={true}
+                    // offset={50} Es para llevar mas abajo del componente.
+                    duration={1000}
+                  >
+                    {" "}
+                    <Link
+                      px={3}
+                      _hover={{
+                        color: "brand.secondary",
+                        textDecoration: "overline",
+                        textDecorationColor: "brand.secondary",
+                      }}
+                      key={link.name}
                     >
-                      {" "}
-                      <Link
-                        px={3}
-                        _hover={{
-                          color: "brand.secondary",
-                          textDecoration: "overline",
-                          textDecorationColor: "brand.secondary",
-                        }}
-                        key={link.name}
+                      <Tooltip
+                        label="Auto start"
+                        placement="bottom"
+                        fontSize="sm"
                       >
                         {link.name}
-                      </Link>
-                    </LinkScroll>
-                  ))}
-                </Flex>
-                <Flex display={["flex", "flex", "none", "none"]} >
-                  <IconButton
-                    icon={<HamburgerIcon />}
-                    aria-label="Open Menu"
-                    variant="ghost"
-                    // display={["flex", "flex", "none", "none"]}
-                    onClick={() => changeDisplay("flex")}
-                  ></IconButton>
-                </Flex>
-                <Flex    pr="1rem">
+                      </Tooltip>
+                    </Link>
+                  </LinkScroll>
+                ))}
+              </Flex>
+              <MotionFlex
+                pr="1rem"
+                whileTap="tap"
+                whileHover="hover"
+                variants={showToggleMode}
 
+              >
                 <IconButton
                   icon={isDark ? <MoonIcon /> : <SunIcon />}
                   aria-label="Mode"
                   variant="ghost"
                   onClick={toggleColorMode}
-                  
-                  ></IconButton>
-                  </Flex>
-              </HStack>
-            </Flex>
-          </Flex>
 
-          {/* BUGER MENU> */}
+                  _hover={{
+                    textDecorationColor: "none",
+                    boxShadow: "none",
+                    outline: "none",
+                    border: "none",
+                  }}
+                  _visited={{
+                    textDecorationColor: "none",
+                    boxShadow: "none",
+                    outline: "none",
+                    border: "none",
+                  }}
+                  _active={{
+                    textDecorationColor: "none",
+                    boxShadow: "none",
+                    outline: "none",
+                    border: "none",
+                  }}
+                ></IconButton>
+              </MotionFlex>
+              <MotionFlex display={["flex", "flex", "none", "none"]}>
+                <IconButton
+                  icon={
+                    display === "none" ? <HamburgerIcon /> : <SmallCloseIcon />
+                  }
+                  aria-label="Open Menu"
+                  variant="ghost"
+                  mr="1rem"
+                  onClick={
+                    display === "none"
+                      ? () => changeDisplay("flex")
+                      : () => changeDisplay("none")
+                  }
+                ></IconButton>
+              </MotionFlex>
+            </HStack>
+          </Flex>
+        </Flex>
+
+        {/* BUGER MENU> */}
+        <Center>
           <Flex
             minWidth={{ base: "480px", sm: "767px", md: "992px", lg: "1200px" }}
             pos="fixed"
-            top="0"
-            left="0"
+            bottom="4.5rem"
+            width="100%"
             flexDirection="column"
             display={display}
             bg={isDark ? "brand.dark" : "brand.light"}
-            justifyContent="center"
-            justifySelf="center"
           >
-            <Flex justify="flex-start">
-              <IconButton
-                aria-label="Close Menu"
-                icon={<CloseIcon />}
-                size="sm"
-                varian="ghost"
-                onClick={() => changeDisplay("none")}
-              ></IconButton>
-            </Flex>
-            <VStack align="center">
+            <Grid
+              alignContent="center"
+              templateColumns="repeat(3 ,1fr)"
+              gap={12}
+              py="1rem"
+              justifyContent="center"
+              display={["grid", "grid", "none", "none"]}
+            >
               {Links.map((link) => (
-                <LinkScroll
-                  to={link.href}
-                  spy={true}
-                  smooth={true}
-                  duration={1000}
-                >
-                  {" "}
-                  <Link
-                    variant="ghost"
-                    aria-label="Home"
-                    w="100%"
-                    key={link.name}
+                <VStack alignContent="center" fontWeight="bold" fontSize="xl">
+                  <LinkScroll
+                    to={link.href}
+                    spy={true}
+                    smooth={true}
+                    duration={1000}
                   >
-                    {link.name}
-                  </Link>
-                </LinkScroll>
+                    <Link
+                      variant="ghost"
+                      aria-label="Home"
+                      w="100%"
+                      key={link.name}
+                      alignContent="center"
+                      justifyContent="center"
+                    >
+                      <Center>{link.icon}</Center>
+                    </Link>
+                  </LinkScroll>
+                </VStack>
               ))}
-            </VStack>
+            </Grid>
           </Flex>
-        </Container>
+        </Center>
+      </Container>
     </>
   );
 };

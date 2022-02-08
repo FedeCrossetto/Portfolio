@@ -24,7 +24,7 @@ import {
   MotionFlex,
   MotionStack,
   AnimationFlex,
-  AnimationSpring,
+  AnimationFade,
   AnimationTransition,
   showComponent,
 } from "../../styles/animation";

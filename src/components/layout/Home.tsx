@@ -19,18 +19,14 @@ import { ArrowForwardIcon, ArrowDownIcon } from "@chakra-ui/icons";
 import { SiNetlify } from "react-icons/si";
 import { FiGithub, FiLinkedin } from "react-icons/fi";
 import { BsMouse3 } from "react-icons/bs";
-import portfolio from "../../assets/portfolio.png";
-import messi from "../../assets/messi.png";
+import avatar from "../../assets/fede.png";
 import {
   MotionFlex,
   MotionStack,
-  AnimationFlex,
-  AnimationSpring,
+  AnimationFade,
   AnimationTransition,
   showComponent,
 } from "../../styles/animation";
-
-import { motion } from "framer-motion";
 
 const Home = () => {
   const [isNotSmallerScreen] = useMediaQuery("(min-width:768px)");
@@ -50,8 +46,8 @@ const Home = () => {
         >
           <VStack
             // direction="column"
-            mr={["1rem", "1rem", "4rem", "4rem"]}
-            mt={["4rem", "3rem", "2rem", ""]}
+            pr={["1rem", "1rem", "4rem", "4rem"]}
+            pt={["2rem", "2rem", "2rem", ""]}
           >
             <Link href="https://github.com/FedeCrossetto" isExternal>
               <Tooltip label="GitHub" placement="left">
@@ -96,10 +92,10 @@ const Home = () => {
 
           <VStack maxW={["", "", "26rem", "26rem"]}>
             <Image
-              ml="2rem"
+              // ml="2rem"
               top="0"
-              bg="brand.secondary"
-              src={messi}
+              // bg="brand.secondary"
+              src={avatar}
               boxSize="250px"
               display={["flex", "flex", "none", "none"]}
               objectFit="contain"
@@ -149,7 +145,7 @@ const Home = () => {
             <MotionStack
               initial="hidden"
               animate="visible"
-              variants={AnimationSpring}
+              variants={AnimationFade}
               justifyContent="center"
               alignSelf={["center", "center", "start", "start"]}
               pt={["4rem","8rem","10rem","12rem"]}
@@ -196,8 +192,8 @@ const Home = () => {
             <Image
               ml="2rem"
               top="0"
-              bg="brand.secondary"
-              src={messi}
+              // bg="brand.secondary"
+              src={avatar}
               boxSize="500px"
               display={["none", "none", "flex", "flex"]}
               objectFit="contain"

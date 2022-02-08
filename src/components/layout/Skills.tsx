@@ -64,17 +64,11 @@ const Skills = () => {
               <Progress value={90} size='xs' colorScheme='purple' />
             <HStack justifyContent="space-between" mt="0.8rem">
                 <Text>Angular</Text>
-                <Text>20 %</Text>
+                <Text>30 %</Text>
               </HStack>
-              <Progress value={20} size='xs' colorScheme='purple' />
-            <HStack justifyContent="space-between" mt="0.8rem">
-                <Text>.NET Core</Text>
-                <Text>70 %</Text>
-              </HStack>
-              <Progress value={70} size='xs' colorScheme='purple' />
+              <Progress value={30} size='xs' colorScheme='purple' />
             </AccordionPanel>
           </AccordionItem>
-
           <AccordionItem>
             <h2 >
               <AccordionButton mx="1rem">
@@ -93,16 +87,11 @@ const Skills = () => {
                 <Text>70 %</Text>
               </HStack>
               <Progress value={70} size='xs' colorScheme='purple' />
-              <HStack justifyContent="space-between" mt="0.8rem">
-                <Text>.NET Core</Text>
-                <Text>70 %</Text>
-              </HStack>
-              <Progress value={70} size='xs' colorScheme='purple' />
                <HStack justifyContent="space-between" mt="0.8rem">
-                <Text>.NET Core</Text>
-                <Text>70 %</Text>
+                <Text>JS [Express.JS & Node.JS]</Text>
+                <Text>50 %</Text>
               </HStack>
-              <Progress value={70} size='xs' colorScheme='purple' />
+              <Progress value={50} size='xs' colorScheme='purple' />
             </AccordionPanel>
           </AccordionItem>
           <AccordionItem>
@@ -119,20 +108,15 @@ const Skills = () => {
             </h2>
             <AccordionPanel pb={4}>
                <HStack justifyContent="space-between" mt="0.8rem">
-                <Text>.NET Core</Text>
-                <Text>70 %</Text>
+                <Text>SQL Server</Text>
+                <Text>90 %</Text>
               </HStack>
-              <Progress value={70} size='xs' colorScheme='purple' />
+              <Progress value={90} size='xs' colorScheme='purple' />
                 <HStack justifyContent="space-between" mt="0.8rem">
-                <Text>.NET Core</Text>
-                <Text>70 %</Text>
+                <Text>Oracle</Text>
+                <Text>65 %</Text>
               </HStack>
-              <Progress value={70} size='xs' colorScheme='purple' />
-                <HStack justifyContent="space-between" mt="0.8rem">
-                <Text>.NET Core</Text>
-                <Text>70 %</Text>
-              </HStack>
-              <Progress value={70} size='xs' colorScheme='purple' />
+              <Progress value={65} size='xs' colorScheme='purple' />
             </AccordionPanel>
           </AccordionItem>
 
@@ -150,20 +134,15 @@ const Skills = () => {
             </h2>
             <AccordionPanel pb={4}>
                 <HStack justifyContent="space-between" mt="0.8rem">
-                <Text>.NET Core</Text>
-                <Text>70 %</Text>
+                <Text>Git</Text>
+                <Text>95 %</Text>
               </HStack>
-              <Progress value={20} size='xs' colorScheme='purple' />
+              <Progress value={95} size='xs' colorScheme='purple' />
                 <HStack justifyContent="space-between" mt="0.8rem">
-                <Text>.NET Core</Text>
-                <Text>70 %</Text>
+                <Text>TFS</Text>
+                <Text>90 %</Text>
               </HStack>
-              <Progress value={20} size='xs' colorScheme='purple' />
-                <HStack justifyContent="space-between" mt="0.8rem">
-                <Text>.NET Core</Text>
-                <Text>70 %</Text>
-              </HStack>
-              <Progress value={20} size='xs' colorScheme='purple' />
+              <Progress value={90} size='xs' colorScheme='purple' />
             </AccordionPanel>
           </AccordionItem>
         </Accordion>
