@@ -20,6 +20,7 @@ import { HiOutlineHome ,HiCode } from "react-icons/hi";
 import { RiContactsLine  } from "react-icons/ri";
 import { Link as LinkScroll ,animateScroll as scroll} from "react-scroll";
 import logoo from "../../assets/logoo.png";
+import logo from "../../assets/logo.png";
 import {
   MotionFlex,
   showToggleMode,
@@ -39,8 +40,7 @@ export const Navbar = () => {
     { name: "About", href: "about", icon:<RiContactsLine /> },
     { name: "Skills", href: "skills", icon:<BsBarChart /> },
     { name: "Experience", href: "experience",icon:<HiCode />  },
-    { name: "Portfolio", href: "portfolio",icon:<FaSlideshare /> },
-    { name: "Contact me", href: "contactme", icon:<BsTelephone /> },
+    { name: "Portfolio", href: "portfolio",icon:<FaSlideshare /> }
   ];
 
   return (
@@ -65,7 +65,7 @@ export const Navbar = () => {
               ml={["", "1.5rem", "", "3.5rem"]}
               pb={["1rem", "1rem", "", ""]}
             >
-              <Image h="4rem" src={logoo} />
+              <Image h="4rem" src={logo} />
             </Link>
           </HStack>
           <Flex alignItems="flex-center">
@@ -77,7 +77,7 @@ export const Navbar = () => {
                     spy={true}
                     smooth={true}
                     // offset={50} Es para llevar mas abajo del componente.
-                    duration={1000}
+                    duration={1500}
                   >
                     {" "}
                     <Link
