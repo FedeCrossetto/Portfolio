@@ -27,9 +27,11 @@ export const AnimationFade = {
   visible: { y: "0", transition: { duration: 1.5, type: "spring" } },
 };
 
-export const AnimationTransition = {
-  // whileHover:{ scale: 1.2, rotate: 360,  transition: { duration: 0.7 }},
-  whileTap: {
+export const AnimationButton = {
+  hover:{
+    scale:1.1
+  },
+  tap: {
     scale: 0.5,
     rotate: -20,
     borderRadius: "100%",
@@ -55,6 +57,16 @@ export const showToggleMode = {
     borderRadius: "100%",
   },
 };
+
+export const BouncingElement ={
+    y:{
+      duration:0.4,
+      yoyo:Infinity,
+      ease:"easeOut"
+    }
+}
+
+
 
 export const MotionFlex = motion<FlexProps>(Flex);
 export const MotionStack = motion<StackProps>(Stack);

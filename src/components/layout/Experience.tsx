@@ -25,7 +25,7 @@ import {
   MotionStack,
   AnimationFlex,
   AnimationFade,
-  AnimationTransition,
+  AnimationButton,
   showComponent,
 } from "../../styles/animation";
 
@@ -35,7 +35,7 @@ const Experience = () => {
     <>
       <Container
         minWidth={["480px", "767px", "992px", "1200px"]}
-        pt="24rem"
+        pt="20rem"
         id="experience"
       >
         <MotionFlex
