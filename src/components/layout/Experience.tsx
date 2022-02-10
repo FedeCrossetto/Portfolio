@@ -34,7 +34,7 @@ const Experience = () => {
   return (
     <>
       <Container
-        minWidth={["480px", "767px", "992px", "1200px"]}
+        minWidth={["540px", "767px", "992px", "1200px"]}
         pt="20rem"
         id="experience"
       >

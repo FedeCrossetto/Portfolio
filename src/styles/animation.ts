@@ -24,7 +24,7 @@ export const AnimationFlex = {
 
 export const AnimationFade = {
   hidden: { y: "-100vh" },
-  visible: { y: "0", transition: { duration: 1.5, type: "spring" } },
+  visible: { y: "0", transition: { duration: 1.5, type: "spring" }},
 };
 
 export const AnimationButton = {

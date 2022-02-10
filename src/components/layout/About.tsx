@@ -24,7 +24,7 @@ export const About = () => {
 
   return (
     <>
-      <Container minWidth={["480px", "767px", "992px", "1200px"]} pt="18rem" id="about">
+      <Container  minWidth={["540px", "767px", "992px", "1200px"]} pt={["8rem","8rem","18rem","18rem"]} id="about">
         <Flex justify="center">
           <VStack>
             <Heading fontSize={["2xl", "3xl", "4xl", "5xl"]}>About Me</Heading>
@@ -79,6 +79,7 @@ export const About = () => {
                     color="brand.primary"
                     href={MyCV}
                     download ="Fede Crossetto CV"
+                    pos="static"
                   >
                     Download CV
                   </Button>

@@ -7,6 +7,7 @@ import Skills from "./components/layout/Skills";
 import About from "./components/layout/About";
 import Experience from "./components/layout/Experience";
 import Portfolio from "./components/layout/Portfolio";
+import { Carousel } from "./components/layout/Carousel";
 
 function App() {
   return (
@@ -15,8 +16,8 @@ function App() {
       <Home />
       <About />
       <Skills />
-      <Experience/>
-      <Portfolio/>
+      <Experience />
+      <Portfolio />
     </ChakraProvider>
   );
 }
