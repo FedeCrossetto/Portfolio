@@ -94,7 +94,7 @@ export const About = () => {
                       color="brand.primary"
                       href={MyCV}
                       download ="Fede Crossetto CV"
-                      pos="static"
+                      pos="static" 
                     >
                       Download CV
                     </Button>
