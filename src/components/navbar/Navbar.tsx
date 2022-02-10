@@ -45,9 +45,9 @@ export const Navbar = () => {
 
   return (
     <>
-      <Container minWidth={["480px", "767px", "992px", "1200px"]} h="3rem">
+      <Container minWidth={["540px", "767px", "992px", "1200px"]} h="3rem">
         <Flex
-          minWidth={["480px", "767px", "992px", "1200px"]}
+          minWidth={["540px", "767px", "992px", "1200px"]}
           py={1}
           bg={isDark ? "brand.dark" : "brand.light"}
           alignItems="center"
@@ -88,14 +88,8 @@ export const Navbar = () => {
                         textDecorationColor: "brand.secondary",
                       }}
                       key={link.name}
-                    >
-                      <Tooltip
-                        label="Auto start"
-                        placement="bottom"
-                        fontSize="sm"
-                      >
+                    > 
                         {link.name}
-                      </Tooltip>
                     </Link>
                   </LinkScroll>
                 ))}
@@ -155,7 +149,7 @@ export const Navbar = () => {
         {/* BUGER MENU> */}
         <Center>
           <Flex
-            minWidth={{ base: "480px", sm: "767px", md: "992px", lg: "1200px" }}
+          minWidth={["540px", "767px", "992px", "1200px"]}
             pos="fixed"
             bottom="4.5rem"
             width="100%"
@@ -169,7 +163,8 @@ export const Navbar = () => {
               gap={12}
               py="1rem"
               justifyContent="center"
-              display={["grid", "grid", "none", "none"]}
+              display={["grid", "grid", "none", "none"]}              
+              
             >
               {Links.map((link) => (
                 <VStack alignContent="center" fontWeight="bold" fontSize="xl">
@@ -178,6 +173,7 @@ export const Navbar = () => {
                     spy={true}
                     smooth={true}
                     duration={1000}
+                    
                   >
                     <Link
                       variant="ghost"
@@ -187,7 +183,13 @@ export const Navbar = () => {
                       alignContent="center"
                       justifyContent="center"
                     >
+                       <Tooltip
+                        label={link.name}
+                        placement="bottom"
+                        fontSize="sm"
+                      >
                       <Center>{link.icon}</Center>
+                      </Tooltip>
                     </Link>
                   </LinkScroll>
                 </VStack>

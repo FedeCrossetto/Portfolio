@@ -4,55 +4,28 @@ import {
   Heading,
   VStack,
   Text,
-  Tabs,
-  Tab,
-  TabList,
-  TabPanel,
-  TabPanels,
+  Stack,
 } from "@chakra-ui/react";
-import Cards from "./Cards";
+import { Carousel } from "./Carousel";
 
 const Portfolio = () => {
   return (
     <>
-      <Container minWidth={["480px", "767px", "992px", "1200px"]} pt="20rem" id="portfolio">
+      <Container
+        minWidth={["540px", "767px", "992px", "1200px"]}
+        pt="20rem"
+        pb="10rem"
+        id="portfolio"
+      >
         <Flex justify="center">
           <VStack>
             <Heading fontSize={["2xl", "3xl", "4xl", "5xl"]}>Portfolio</Heading>
-            <Text
-              fontSize={["sm", "md", "md", "md"]}
-              color="brand.tertiary"
-              pb="6rem"
-            >
-              Some recent works
-            </Text>   
-          <Tabs colorScheme="purple" >
-            <TabList >
-              <Tab fontWeight="bold" fontSize="sm" >ALL</Tab>
-              <Tab fontWeight="bold" fontSize="sm">WEB DEVELOPMENT</Tab>
-              <Tab fontWeight="bold" fontSize="sm">LANDING</Tab>
-              <Tab fontWeight="bold" fontSize="sm">E-COMMERCE</Tab>
-              <Tab fontWeight="bold" fontSize="sm">E-LEARNING</Tab>
-            </TabList>
-
-            <TabPanels>
-              <TabPanel>
-              <Cards/>
-              </TabPanel>
-              <TabPanel>
-                <p>two!</p>
-              </TabPanel>
-              <TabPanel>
-              <Cards/>
-              </TabPanel>
-              <TabPanel>
-                <p>three!</p>
-              </TabPanel>
-              <TabPanel>
-              <Cards/>
-              </TabPanel>
-            </TabPanels>
-          </Tabs>
+            <Text fontSize={["sm", "md", "md", "md"]} color="brand.tertiary">
+              Drag to the sides
+            </Text>
+            <Stack pt="5rem">
+              <Carousel />
+            </Stack>
           </VStack>
         </Flex>
       </Container>

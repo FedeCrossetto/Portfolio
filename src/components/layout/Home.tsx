@@ -1,6 +1,5 @@
-import React, { Fragment, useEffect, useRef, useState } from "react";
+import React, {useState } from "react";
 import {
-  useColorMode,
   Text,
   VStack,
   Flex,
@@ -8,7 +7,6 @@ import {
   IconButton,
   Link,
   Divider,
-  useMediaQuery,
   Image,
   Button,
   Container,
@@ -24,13 +22,10 @@ import {
   ModalFooter,
   Box,
   HStack,
-  Avatar,
   Textarea,
-  Input,
   Center,
   FormControl,
   FormErrorMessage,
-  FormHelperText,
 } from "@chakra-ui/react";
 import { Link as LinkScroll, animateScroll as scroll } from "react-scroll";
 import { ArrowForwardIcon, ArrowDownIcon } from "@chakra-ui/icons";
@@ -188,9 +183,10 @@ const Home = () => {
           </ModalContent>
         </Modal>
         {/* --------------------------------------------------------/MODAL-------------------------------------------------------- */}
+     
       <Container
-        minWidth={["480px", "767px", "992px", "1200px"]}
-        pt={["2rem", "4rem", "8rem", "10rem"]}
+        minWidth={["540px", "767px", "992px", "1200px"]}
+        pt={["1rem", "4rem", "8rem", "10rem"]}
         id="home"
       >
        
@@ -202,9 +198,9 @@ const Home = () => {
           variants={showComponent}
         >
           <VStack
-            // direction="column"
             pr={["1rem", "1rem", "4rem", "4rem"]}
-            pt={["2rem", "2rem", "2rem", ""]}
+            pt={["1rem", "2rem", "2rem", ""]}
+            
           >
             <Link href="https://github.com/FedeCrossetto" isExternal>
               <Tooltip label="GitHub" placement="left">
@@ -214,6 +210,7 @@ const Home = () => {
                   icon={<FiGithub />}
                   aria-label="Gitlab"
                   variant="ghost"
+                  pos="static"
                 ></IconButton>
               </Tooltip>
             </Link>
@@ -228,6 +225,7 @@ const Home = () => {
                   icon={<SiNetlify />}
                   aria-label="Netlify"
                   variant="ghost"
+                  pos="static"
                 ></IconButton>
               </Tooltip>
             </Link>
@@ -242,6 +240,7 @@ const Home = () => {
                   icon={<FiLinkedin />}
                   aria-label="Linkedin"
                   variant="ghost"
+                  pos="static"
                 ></IconButton>
               </Tooltip>
             </Link>
@@ -310,7 +309,7 @@ const Home = () => {
             >
               <Link
                 href="/#"
-                pt={["5rem", "4rem", "3rem", "0.5rem"]}
+                pt={["3rem", "4rem", "3rem", "0.5rem"]}
                 variant="ghost"
                 _hover={{
                   textDecorationColor: "none",
@@ -320,24 +319,24 @@ const Home = () => {
                 }}
               >
                 <Stack>
-                  <motion.span
+                  <motion.span                 
                     transition={BouncingElement}
                     animate={{
                       y: ["50%", "-50%"],
-                    }}
+                    }}                 
                   >
                     <LinkScroll
                       to="about"
                       spy={true}
                       smooth={true}
                       duration={1200}
+                      offset={30}
                     >
-                      <Button  variant="ghost">
+                      <Button  variant="ghost" >
                         <Text>Scroll down</Text>
                         <ArrowDownIcon
                           alignSelf="center"
-                          justifyContent="center"
-                         
+                          justifyContent="center"                         
                         />
                       </Button>
                     </LinkScroll>

@@ -27,7 +27,7 @@ import { FiGitPullRequest, FiDatabase } from "react-icons/fi";
 
 const Skills = () => {
   return (
-    <Container minWidth={["480px", "767px", "992px", "1200px"]} pt="14rem" id="skills">
+    <Container minWidth={["540px", "767px", "992px", "1200px"]} pt="14rem" id="skills">
       <Flex justify="center">
         <VStack>
           <Heading fontSize={["2xl", "3xl", "4xl", "5xl"]}>Skills</Heading>
