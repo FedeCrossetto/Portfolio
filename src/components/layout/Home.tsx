@@ -305,11 +305,11 @@ const Home = () => {
               variants={AnimationFade}
               justifyContent="center"
               alignSelf={["center", "center", "start", "start"]}
-              pt={["4rem", "8rem", "10rem", "10rem"]}
+              pt={["6rem", "6rem", "10rem", "10rem"]}
             >
               <Link
                 href="/#"
-                pt={["3rem", "4rem", "3rem", "0.5rem"]}
+                pt={["3rem", "2rem", "3rem", "0.5rem"]}
                 variant="ghost"
                 _hover={{
                   textDecorationColor: "none",
@@ -330,7 +330,7 @@ const Home = () => {
                       spy={true}
                       smooth={true}
                       duration={1200}
-                      offset={30}
+                      offset={100}
                     >
                       <Button  variant="ghost" >
                         <Text>Scroll down</Text>
