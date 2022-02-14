@@ -1,7 +1,5 @@
-import React from "react";
 import {
   Container,
-  Flex,
   Heading,
   VStack,
   Text,
@@ -22,10 +20,6 @@ import { MdCheckCircle, MdWorkOutline } from "react-icons/md";
 import { FaUserGraduate } from "react-icons/fa";
 import {
   MotionFlex,
-  MotionStack,
-  AnimationFlex,
-  AnimationFade,
-  AnimationButton,
   showComponent,
 } from "../../styles/animation";
 

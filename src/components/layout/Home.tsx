@@ -29,11 +29,12 @@ import {
 } from "@chakra-ui/react";
 import { Link as LinkScroll, animateScroll as scroll } from "react-scroll";
 import { ArrowForwardIcon, ArrowDownIcon } from "@chakra-ui/icons";
-import { SiNetlify, SiGmail } from "react-icons/si";
+import { SiGmail ,SiVercel } from "react-icons/si";
 import { FiGithub, FiLinkedin } from "react-icons/fi";
 import { AiOutlineWhatsApp } from "react-icons/ai";
 import avatar from "../../assets/fede.png";
 import avatar2 from "../../assets/fede2.png";
+
 import {
   MotionFlex,
   MotionStack,
@@ -176,9 +177,6 @@ const Home = () => {
             </ModalBody>
 
             <ModalFooter>
-              {/* <Button colorScheme="blue" mr={3} onClick={onClose}>
-                Close
-              </Button> */}
             </ModalFooter>
           </ModalContent>
         </Modal>
@@ -215,14 +213,14 @@ const Home = () => {
               </Tooltip>
             </Link>
             <Link
-              href="https://app.netlify.com/teams/fede-vazquez-crossetto/overview"
+              href="https://vercel.com/fedevazquezcrossetto-gmailcom"
               isExternal
             >
-              <Tooltip label="Netlify" placement="left">
+              <Tooltip label="Vercel" placement="left">
                 <IconButton
                   size="lg"
                   _hover={{ color: "brand.secondary" }}
-                  icon={<SiNetlify />}
+                  icon={<SiVercel />}
                   aria-label="Netlify"
                   variant="ghost"
                   pos="static"

@@ -9,19 +9,15 @@ import {
     Button,
     ModalCloseButton,
     useDisclosure,
-    Container,
   } from '@chakra-ui/react'
-import React from "react";
 
  export const ModalForm = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const initialRef = React.useRef();
-  const finalRef = React.useRef();
+  // const initialRef = React.useRef();
+  // const finalRef = React.useRef();
   return (
     <>
-    {/* <Button onClick={onOpen}>Open Modal</Button> */}
-
 <Modal blockScrollOnMount={false} isOpen={isOpen} onClose={onClose}>
   <ModalOverlay />
   <ModalContent>

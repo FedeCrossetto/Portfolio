@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Accordion,
   AccordionButton,
@@ -6,18 +5,11 @@ import {
   AccordionItem,
   AccordionPanel,
   Box,
-  Button,
-  Center,
   Container,
   Flex,
   Heading,
   HStack,
   Progress,
-  Slider,
-  SliderFilledTrack,
-  SliderThumb,
-  SliderTrack,
-  Stack,
   Text,
   VStack,
 } from "@chakra-ui/react";
