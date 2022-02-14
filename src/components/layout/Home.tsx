@@ -112,7 +112,7 @@ const Home = () => {
                 <VStack alignSelf="center" top="0" mx="0.5rem">
                   <FormControl
                     onSubmit={handleSubmit}
-                    method="GET"
+                    // method="GET"
                     isInvalid={isError}
                     isRequired
                   >
@@ -145,7 +145,7 @@ const Home = () => {
                             bg="brand.primary"
                             borderRadius="full"
                             p="0.2rem"
-                            name="whatsapp"
+                            // name="whatsapp"
                           >
                             <AiOutlineWhatsApp color="white" size="1.5rem" />
                           </Box>
