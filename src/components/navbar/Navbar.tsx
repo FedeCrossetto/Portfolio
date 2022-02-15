@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import { useState} from "react";
 import {
   useColorMode,
   Flex,
@@ -19,7 +19,6 @@ import { BsBarChart ,BsTelephone} from "react-icons/bs";
 import { HiOutlineHome ,HiCode } from "react-icons/hi";
 import { RiContactsLine  } from "react-icons/ri";
 import { Link as LinkScroll ,animateScroll as scroll} from "react-scroll";
-import logoo from "../../assets/logoo.png";
 import logo from "../../assets/logo.png";
 import {
   MotionFlex,
