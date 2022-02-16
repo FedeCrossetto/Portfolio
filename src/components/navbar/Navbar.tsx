@@ -44,19 +44,18 @@ export const Navbar = () => {
 
   return (
     <>
-      <Container minWidth={["540px", "767px", "992px", "1200px"]} h="3rem">
+      <Container minWidth={["570px", "767px", "992px", "1200px"]} h="3rem">
         <Flex
-          minWidth={["540px", "767px", "992px", "1200px"]}
+          minWidth={["570px", "767px", "992px", "1200px"]}
           py={1}
           bg={isDark ? "brand.dark" : "brand.light"}
           alignItems="center"
           justifyContent="space-between"
           pos="fixed"
-          bottom={isNotSmallerScreen ? "" : "0"}
+          // bottom={isNotSmallerScreen ? "" : "0"}
         >
           <HStack alignContent="center" fontSize="xl">
             <Link
-              letterSpacing={1.5}
               _hover={{
                 textDecoration: "none",
               }}
@@ -105,6 +104,7 @@ export const Navbar = () => {
                   aria-label="Mode"
                   variant="ghost"
                   onClick={toggleColorMode}
+                  fontSize="2xl"
 
                   _hover={{
                     textDecorationColor: "none",
@@ -133,7 +133,8 @@ export const Navbar = () => {
                   }
                   aria-label="Open Menu"
                   variant="ghost"
-                  mr="1rem"
+                  mr="2rem"
+                  fontSize="2xl"
                   onClick={
                     display === "none"
                       ? () => changeDisplay("flex")
@@ -148,25 +149,27 @@ export const Navbar = () => {
         {/* BUGER MENU> */}
         <Center>
           <Flex
-          minWidth={["540px", "767px", "992px", "1200px"]}
+            minWidth={["540px", "767px", "992px", "1200px"]}
             pos="fixed"
-            bottom="4.5rem"
+            // bottom="4.5rem"
+           
+            top="4.5rem"
             width="100%"
             flexDirection="column"
             display={display}
             bg={isDark ? "brand.dark" : "brand.light"}
+            boxShadow="xl"
           >
             <Grid
               alignContent="center"
               templateColumns="repeat(3 ,1fr)"
               gap={12}
               py="1rem"
-              justifyContent="center"
               display={["grid", "grid", "none", "none"]}              
               
             >
               {Links.map((link) => (
-                <VStack alignContent="center" fontWeight="bold" fontSize="xl">
+                <VStack alignContent="center" fontWeight="bold" fontSize="2xl">
                   <LinkScroll
                     to={link.href}
                     spy={true}
