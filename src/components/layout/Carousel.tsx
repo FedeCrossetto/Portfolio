@@ -31,7 +31,7 @@ export const Carousel = () => {
                   <MotionFlex className="item" key={image}>
                     <Image src={image} 
                     alt=""  
-                    minWidth={["10rem","10rem","15rem","15rem"]}
+                    minWidth={["13rem","13rem","15rem","15rem"]}
                     // minHeigth={["10rem","rem","15rem","20rem"]}
                     />
                   </MotionFlex>

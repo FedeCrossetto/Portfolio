@@ -76,11 +76,11 @@ const Experience = () => {
                             as={MdCheckCircle}
                             color="brand.secondary"
                           />
-                          <Text color="brand.tertiary">[2018-2019]</Text>
+                          <Text color="brand.tertiary">[2018-2021 | Complete]</Text>
                           <Text> ISTEA - Desarrollo de Software.</Text>
                         </HStack>
                       </ListItem>
-                      <ListItem>
+                      {/* <ListItem>
                         <HStack>
                           <ListIcon
                             as={MdCheckCircle}
@@ -89,7 +89,7 @@ const Experience = () => {
                           <Text color="brand.tertiary">[2018-2019]</Text>
                           <Text> ISTEA - Desarrollo de Software.</Text>
                         </HStack>
-                      </ListItem>
+                      </ListItem> */}
                     </List>
                   </TabPanel>
                   <TabPanel>
