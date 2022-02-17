@@ -8,6 +8,7 @@ import About from "./components/layout/About";
 import Experience from "./components/layout/Experience";
 import Portfolio from "./components/layout/Portfolio";
 import { Carousel } from "./components/layout/Carousel";
+import { Contact } from "./components/layout/Contact";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Skills />
       <Experience />
       <Portfolio />
+      <Contact/>
     </ChakraProvider>
   );
 }
