@@ -1,8 +1,6 @@
-import React, { useState } from "react";
 import {
   Text,
   VStack,
-  Flex,
   Heading,
   IconButton,
   Link,
@@ -11,31 +9,13 @@ import {
   Button,
   Container,
   Tooltip,
-  Stack,
-  useDisclosure,
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalBody,
-  ModalCloseButton,
-  ModalHeader,
-  ModalFooter,
-  Box,
-  HStack,
-  Textarea,
-  Center,
-  FormControl,
-  FormErrorMessage,
-  useBreakpointValue,
+  Stack
 } from "@chakra-ui/react";
 import { Link as LinkScroll, animateScroll as scroll } from "react-scroll";
 import { ArrowForwardIcon, ArrowDownIcon } from "@chakra-ui/icons";
-import { SiGmail, SiVercel } from "react-icons/si";
+import {SiVercel } from "react-icons/si";
 import { FiGithub, FiLinkedin } from "react-icons/fi";
-import { AiOutlineWhatsApp } from "react-icons/ai";
 import avatar from "../../assets/fede.png";
-import avatar2 from "../../assets/fede2.png";
-
 import {
   MotionFlex,
   MotionStack,
@@ -47,146 +27,8 @@ import {
 import { motion } from "framer-motion";
 
 const Home = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const [input, setInput] = useState("");
-  const [values, setValues] = React.useState({
-    message: "",
-  });
-
-  function handleSubmit(evt: any) {
-    evt.preventDefault();
-  }
-
-  const goToWhatsapp = () => {
-    window.open(
-      "https://api.whatsapp.com/send?phone=541159059154&text=" + values.message
-    );
-  };
-
-  const goToGmail = () => {
-    window.open(
-      "https://mail.google.com/mail/u/0/?fs=1&to=f.vazquez.crossetto@gmail.com&cc=&su=Contact&body=" +
-        values.message +
-        "&tf=cm"
-    );
-  };
-
-  function handleChange(evt: any) {
-    const { target } = evt;
-    const { name, value } = target;
-
-    const newValues = {
-      ...values,
-      [name]: value,
-    };
-
-    setValues(newValues);
-    setInput(evt.target.value);
-  }
-
-  const isError = input === "";
-  const size = useBreakpointValue({base: 'full', lg: 'xl'})
-
   return (
     <>
-      {/* --------------------------------------------------------MODAL-------------------------------------------------------- */}
-      <Modal
-        blockScrollOnMount={false}
-        isOpen={isOpen}
-        onClose={onClose}
-        scrollBehavior="inside"
-        motionPreset="slideInBottom"
-        // size={size}
-      >
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader letterSpacing={3}>Contact Me</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>
-            <Center>
-              <Image
-                src={avatar2}
-                objectFit="contain"
-                bg="brand.secondary"
-                borderRadius="full"
-                boxSize="100px"
-                boxShadow="lg"
-              />
-            </Center>
-            <Flex justifyContent="space-between" p="1rem">
-              <VStack alignSelf="center" top="0" mx="0.5rem">
-                <FormControl
-                  onSubmit={handleSubmit}
-                  // method="GET"
-                  isInvalid={isError}
-                  isRequired
-                >
-                  <HStack>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      value={values.message}
-                      onChange={handleChange}
-                      placeholder="Write the message you want to send me ..."
-                      resize="none"
-                      borderRadius="xl"
-                      maxLength={200}
-                      p="0.5rem"
-                      fontSize="xs"
-                      cols={50}
-                      rows={6}
-                    />
-                    <VStack>
-                      <Button
-                        type="submit"
-                        boxShadow="lg"
-                        borderRadius="lg"
-                        p="0.5rem"
-                        onClick={goToWhatsapp}
-                        h="3.5rem"
-                        isDisabled={isError ? true : false}
-                      >
-                        <Box
-                          bg="brand.primary"
-                          borderRadius="full"
-                          p="0.2rem"
-                          // name="whatsapp"
-                        >
-                          <AiOutlineWhatsApp color="white" size="1.5rem" />
-                        </Box>
-                      </Button>
-                      <Button
-                        type="submit"
-                        boxShadow="lg"
-                        borderRadius="lg"
-                        p="0.5rem"
-                        onClick={goToGmail}
-                        h="3.5rem"
-                        isDisabled={isError ? true : false}
-                      >
-                        <Box bg="white" borderRadius="full" p="0.2rem">
-                          <SiGmail color="red" size="1.5rem" />
-                        </Box>
-                      </Button>
-                    </VStack>
-                  </HStack>
-                  {isError && (
-                    <VStack>
-                      <FormErrorMessage fontSize="xs">
-                        Write some message to send.
-                      </FormErrorMessage>
-                    </VStack>
-                  )}
-                </FormControl>
-              </VStack>
-            </Flex>
-          </ModalBody>
-
-          <ModalFooter></ModalFooter>
-        </ModalContent>
-      </Modal>
-      {/* --------------------------------------------------------/MODAL-------------------------------------------------------- */}
-
       <Container
         minWidth={["540px", "767px", "992px", "1200px"]}
         pt={["1rem", "4rem", "8rem", "10rem"]}
@@ -293,9 +135,15 @@ const Home = () => {
                 color="brand.primary"
                 fontSize="sm"
                 variant="outline"
-                onClick={onOpen}
+                
               >
-                Contact Me
+                 <LinkScroll
+                    to="contact"
+                    spy={true}
+                    smooth={true}
+                    duration={1000}  
+                  >Contact Me</LinkScroll>
+                
               </Button>
             </MotionStack>
 

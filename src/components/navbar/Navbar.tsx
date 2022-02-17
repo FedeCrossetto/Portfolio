@@ -16,7 +16,7 @@ import {
 import { HamburgerIcon,MoonIcon, SunIcon,SmallCloseIcon } from "@chakra-ui/icons";
 import { FaSlideshare } from "react-icons/fa";
 import { BsBarChart ,BsTelephone} from "react-icons/bs";
-import { HiOutlineHome ,HiCode } from "react-icons/hi";
+import { HiOutlineHome ,HiCode ,HiOutlineMail} from "react-icons/hi";
 import { RiContactsLine  } from "react-icons/ri";
 import { Link as LinkScroll ,animateScroll as scroll} from "react-scroll";
 import logo from "../../assets/logo.png";
@@ -39,7 +39,8 @@ export const Navbar = () => {
     { name: "About", href: "about", icon:<RiContactsLine /> },
     { name: "Skills", href: "skills", icon:<BsBarChart /> },
     { name: "Experience", href: "experience",icon:<HiCode />  },
-    { name: "Portfolio", href: "portfolio",icon:<FaSlideshare /> }
+    { name: "Portfolio", href: "portfolio",icon:<FaSlideshare /> },
+    { name: "Contact Me", href: "contact",icon:<HiOutlineMail /> }
   ];
 
   return (
@@ -97,13 +98,13 @@ export const Navbar = () => {
                 whileTap="tap"
                 whileHover="hover"
                 variants={showToggleMode}
-
+                onClick={toggleColorMode}
               >
                 <IconButton
                   icon={isDark ? <MoonIcon /> : <SunIcon />}
                   aria-label="Mode"
                   variant="ghost"
-                  onClick={toggleColorMode}
+                  
                   fontSize="2xl"
 
                   _hover={{
@@ -159,6 +160,7 @@ export const Navbar = () => {
             display={display}
             bg={isDark ? "brand.dark" : "brand.light"}
             boxShadow="xl"
+            pb="1rem"
           >
             <Grid
               alignContent="center"
