@@ -19,7 +19,7 @@ function App() {
       <Skills />
       <Experience />
       <Portfolio />
-      <Contact/>
+      {/* <Contact/> */}
     </ChakraProvider>
   );
 }

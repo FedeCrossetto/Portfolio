@@ -13,7 +13,7 @@ import {
 } from "@chakra-ui/react";
 import { Link as LinkScroll, animateScroll as scroll } from "react-scroll";
 import { ArrowForwardIcon, ArrowDownIcon } from "@chakra-ui/icons";
-import {SiVercel } from "react-icons/si";
+import {SiVercel,SiWhatsapp } from "react-icons/si";
 import { FiGithub, FiLinkedin } from "react-icons/fi";
 import avatar from "../../assets/fede.png";
 import {
@@ -86,6 +86,21 @@ const Home = () => {
                 ></IconButton>
               </Tooltip>
             </Link>
+            <Link
+              href="https://api.whatsapp.com/send?phone=541159059154&text="
+              isExternal
+            >
+              <Tooltip label="Whatsapp" placement="left">
+                <IconButton
+                  fontSize="2xl"
+                  _hover={{ color: "brand.secondary" }}
+                  icon={<SiWhatsapp />}
+                  aria-label="Whatsapp"
+                  variant="ghost"
+                  pos="static"
+                ></IconButton>
+              </Tooltip>
+            </Link>
           </VStack>
 
           <VStack maxW={["", "", "26rem", "26rem"]}>
@@ -102,7 +117,7 @@ const Home = () => {
             ></Image>
             <Heading
               fontSize={["3xl", "4xl", "5xl", "6xl"]}
-              bgGradient="linear(to-r, brand.primary , brand.secondary)"
+              bgGradient="linear(to-t, brand.primary , brand.secondary)"
               bgClip="text"
               alignSelf={["center", "center", "start", "start"]}
             >
@@ -135,15 +150,9 @@ const Home = () => {
                 color="brand.primary"
                 fontSize="sm"
                 variant="outline"
-                
-              >
-                 <LinkScroll
-                    to="contact"
-                    spy={true}
-                    smooth={true}
-                    duration={1000}  
-                  >Contact Me</LinkScroll>
-                
+                onClick={() => scroll.scrollToBottom()}      
+              > 
+              View Portfolio
               </Button>
             </MotionStack>
 

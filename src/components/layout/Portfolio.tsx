@@ -5,8 +5,10 @@ import {
   VStack,
   Text,
   Stack,
+  HStack
 } from "@chakra-ui/react";
 import { Carousel } from "./Carousel";
+import {BsArrowLeftShort,BsArrowRightShort} from "react-icons/bs";
 
 const Portfolio = () => {
   return (
@@ -24,7 +26,11 @@ const Portfolio = () => {
               Drag to the sides
             </Text>
             <Stack pt="5rem">
+              <HStack>
+              <BsArrowLeftShort />
               <Carousel />
+              <BsArrowRightShort />
+              </HStack>
             </Stack>
           </VStack>
         </Flex>
