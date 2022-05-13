@@ -16,7 +16,7 @@ import {
 } from "@chakra-ui/react";
 import { HiOutlineDownload } from "react-icons/hi";
 // import MyCV from "../../assets/cv.pdf";
-import MyCV from "../../assets/cv2022.png";
+import MyCV from "../../assets/CV-05-2022.pdf";
 
 export const About = () => {
   const [isNotSmallerScreen] = useMediaQuery("(min-width:768px)");

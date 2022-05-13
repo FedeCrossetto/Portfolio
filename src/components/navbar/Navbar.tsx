@@ -40,7 +40,7 @@ export const Navbar = () => {
     { name: "Skills", href: "skills", icon:<BsBarChart /> },
     { name: "Experience", href: "experience",icon:<HiCode />  },
     { name: "Portfolio", href: "portfolio",icon:<FaSlideshare /> },
-    { name: "Contact Me", href: "contact",icon:<HiOutlineMail /> }
+    // { name: "Contact Me", href: "contact",icon:<HiOutlineMail /> }
   ];
 
   return (
