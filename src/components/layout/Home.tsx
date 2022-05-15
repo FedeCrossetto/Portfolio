@@ -209,7 +209,7 @@ const Home = () => {
               src={avatar}
               boxSize="500px"
               display={["none", "none", "flex", "flex"]}
-              objectFit="contain"
+              // objectFit='contain'
               borderRadius="full"
               alt="Me"
             ></Image>
