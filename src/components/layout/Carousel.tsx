@@ -30,13 +30,13 @@ export const Carousel = () => {
               {images.map((image) => {
                 return (
                   <MotionFlex className="item" key={image}>
-                    {/* <Link href="https://google.com.ar" cursor="grabbing" isExternal> */}
+                    {/* <a href="https://google.com.ar" target="_blank"> */}
                     <Image src={image} 
                     objectFit="contain"
                     minWidth={["13rem","13rem","15rem","15rem"]}
                     // minHeigth={["10rem","rem","15rem","20rem"]}
                     />
-                    {/* </Link> */}
+                    {/* </a> */}
                   </MotionFlex>
                 );
               })}

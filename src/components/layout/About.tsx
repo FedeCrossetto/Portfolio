@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import React from "react";
 import {
   Button,
   Center,
@@ -12,11 +12,10 @@ import {
   Box,
   useMediaQuery,
   Stack,
-  Link,
 } from "@chakra-ui/react";
 import { HiOutlineDownload } from "react-icons/hi";
-// import MyCV from "../../assets/cv.pdf";
-import MyCV from "../../assets/CV-05-2022.pdf";
+
+import MyCV from "../../assets/CV-06-2022.pdf";
 
 export const About = () => {
   const [isNotSmallerScreen] = useMediaQuery("(min-width:768px)");
