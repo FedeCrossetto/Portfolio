@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import { Container, Flex, Image ,Link } from "@chakra-ui/react";
-import images from "../../assets/images";
+import Imgs from "../../assets/images";
 import "../../styles/Carousel.css";
 import { MotionFlex } from "../../styles/animation";
 
@@ -27,16 +27,16 @@ export const Carousel = () => {
               dragConstraints={{ right: 0, left: -width/2 }}
               className="inner-carousel"
             >
-              {images.map((image) => {
+              {Imgs.map((image) => {
                 return (
-                  <MotionFlex className="item" key={image}>
-                    {/* <Link href="https://google.com.ar" cursor="grabbing" isExternal> */}
-                    <Image src={image} 
-                    objectFit="contain"
+                  <MotionFlex className="item" key={image.src}>
+                    <a href={image.url} target="_blank">
+                    <Image src={image.src} 
                     minWidth={["13rem","13rem","15rem","15rem"]}
+                    objectFit='cover'
                     // minHeigth={["10rem","rem","15rem","20rem"]}
                     />
-                    {/* </Link> */}
+                    </a>
                   </MotionFlex>
                 );
               })}

@@ -3,6 +3,9 @@ import '@fontsource/raleway/400.css'
 import '@fontsource/open-sans/700.css'
 import '@fontsource/poppins/400.css'
 export default extendTheme({
+   config:{
+    initialColorMode:"dark"
+  },
   fonts: {
     heading: 'Poppins',
     body: 'Poppins',
